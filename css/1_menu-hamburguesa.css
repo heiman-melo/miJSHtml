@@ -1,0 +1,79 @@
+.panel {
+  position: fixed;
+  z-index: 998;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  /* display: flex; */
+  /* flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+  overflow-y: auto;
+  background-color: var(--second-modal-color);
+
+  /* opasity vuelve invisible a los elementos pero estos siguen exixtiendo hay por eso se le añade visibility: hiden----------------------------------- */
+  /* opacity: 0;
+  visibility: hidden;
+  transition: visibility 0.8s ease,  opacity 0.8s ease; */
+
+  /* De abajo */
+  /* transform: translate(0, 100%); */
+  /* De la derecha */
+  /* transform: translate(100%, 0); */
+  /* De la izquierda */
+  /* transform: translate(-100%, 0); */
+  /* De arriba */
+  transform: translate(0, -100%);
+  /* de la derecha */
+  /* transform: translate(100%); */
+  /* de la izquierda */
+  /* transform: translate(-100%); */
+  transition: transform 0.5s ease;
+  
+
+
+}
+
+.panel.is-active {
+  transform: translate(0);
+
+  /* opacity: 1;
+  visibility: visible; */
+}
+
+.panel-btn {
+  position: fixed;
+  z-index: 999;
+  bottom: 1vh;
+  right: 1vw;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  padding: 0;
+  background-color: var(--main-color);
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  width: inherit; /*herede la anchura de su padre*/
+  display: flex;
+  text-align: center;
+}
+
+.menu a {
+  padding:10px;
+  width: auto;
+  display: block;
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: var(--main-color);
+  transition: all 0.3s ease;
+}
+
+.menu a:hover {
+  color: var(--second-color);
+  background-color: var(--main-modal-color);
+}
