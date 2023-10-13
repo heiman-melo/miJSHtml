@@ -1,101 +1,115 @@
 <!-- video 81 hasta 104 -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>menu hamburguesa</title>
-    <!-- jonsuh.com/hamburges/  pagina de botones hamburguesa  libreria-->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.1.3/hamburgers.min.css"
-    />
-    <link rel="stylesheet" href="./08_dom-ejercicio-practico.css" />
-  </head>
 
-  <body>
-    <header class="header">
-      <h1>Ejercicios del DOM</h1>
-    </header>
-    <!-- jonsuh.com/hamburges/  pagina de botones hamburguesa  -->
-    <button class="panel-btn hamburger hamburger--vortex" type="button">
-      <span class="hamburger-box">
-        <span class="hamburger-inner"></span>
-      </span>
-    </button>
-    <aside class="panel">
-      <nav class="menu">
-        <a href="#seccion1">Reloj Digital y Alarma Sonora</a>
-        <a href="#seccion2">eventos del teclado</a>
-        <a href="#seccion3">cuenta regresiva</a>
-        <a href="#seccion4">estilos</a>
-        <a href="#seccion5">seccion 5</a>
-        <a href="#seccion6">seccion 6 </a>
-        <a href="#seccion7">seccion 7 </a>
-        <a href="#seccion8">seccion 8 </a>
-        <a href="#seccion9">seccion 9 </a>
-        <a href="#seccion10">seccion 10 </a>
-        <a href="#seccion11">seccion 11 </a>
-        <a href="#seccion12">seccion 12</a>
-        <a href="#seccion13">seccion 13</a>
-        <a href="#seccion14">seccion 14</a>
-        <a href="#seccion15">seccion 15</a>
-        <a href="#seccion16">seccion 16</a>
-        <a href="#seccion17">seccion 17</a>
-        <a href="#seccion18">seccion 18</a>
-        <a href="#seccion19">seccion 19</a>
-        <a href="#seccion20">seccion 20</a>
-      </nav>
-    </aside>
-    <main>
-      <!-- ___________________________________________________________________ -->
-      <!-- 1) -->
-      <section id="seccion1" class="section" data-scroll-spy>
-        <h2>Reloj Digital y Alarma Sonora</h2>
-        <div id="reloj"></div>
-        <div class="flex-row-center">
-          <div class="borde-button">
-            <button id="activar-reloj">Iniciar Reloj</button>
-            <button id="desactivar-reloj">Detener Reloj</button>
-          </div>
-          <div class="borde-button">   
-              <button id="activar-alarma">Iniciar Alarma</button>
-              <button id="desactivar-alarma">Detener Alarma</button>
-          </div>
-          <div class="borde-button"> 
-              <button id="siuuu">Siuuu</button>
-              <button id="detenerSiuuu">DetenerSiuuu</button>
-          </div>
-          <div class="borde-button"> 
-              <button id="explicaSiuuu">ExplicaSiuuu</button>
-              <button id="detenerExplicaSiuuu">DetenerExplicaSiuuu</button>
-          </div>
-          <!-- 3) alarma digital  -->
-          <!-- <audio src="./assets/alarma.mp3" controls id="alarma"></audio> -->
-          <audio src="./assets/Gallo despertador.mp3" id="alarma"></audio>
-          <audio src="./assets/CR7 Muchas gracias aficion. SIUUUU.mp3" id="siuuuSonido"></audio>
-          <audio src="./assets/Cristiano Ronaldo explica.mp3" id="explicaSiuuuSonido"></audio>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>menu hamburguesa</title>
+  <!-- jonsuh.com/hamburges/  pagina de botones hamburguesa  libreria-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.1.3/hamburgers.min.css" />
+  <link rel="stylesheet" href="./08_dom-ejercicio-practico.css" />
+  <link rel="icon" href="./favicon-32x32.png" type="image/x-icon">
+</head>
+
+<body>
+  <header class="header">
+    <h1>Ejercicios del DOM</h1>
+  </header>
+  <!-- jonsuh.com/hamburges/  pagina de botones hamburguesa  -->
+  <button class="panel-btn hamburger hamburger--vortex" type="button">
+    <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+    </span>
+  </button>
+  <aside class="panel">
+    <nav class="menu">
+      <a href="#seccion1">Reloj Digital y Alarma Sonora</a>
+      <a href="#seccion2">eventos del teclado</a>
+      <a href="#seccion3">cuenta regresiva</a>
+      <a href="#seccion4">estilos</a>
+      <a href="#seccion5">bootstrap 4.6</a>
+      <a href="#seccion6">git</a>
+      <a href="#seccion7">hkas</a>
+      <a href="#seccion8">seccion 8 </a>
+      <a href="#seccion9">seccion 9 </a>
+      <a href="#seccion10">seccion 10 </a>
+      <a href="#seccion11">seccion 11 </a>
+      <a href="#seccion12">seccion 12</a>
+      <a href="#seccion13">seccion 13</a>
+      <a href="#seccion14">seccion 14</a>
+      <a href="#seccion15">seccion 15</a>
+      <a href="#seccion16">seccion 16</a>
+      <a href="#seccion17">seccion 17</a>
+      <a href="#seccion18">seccion 18</a>
+      <a href="#seccion19">seccion 19</a>
+      <a href="#seccion20">seccion 20</a>
+    </nav>
+  </aside>
+  <main>
+    <!-- ___________________________________________________________________ -->
+    <!-- 1) -->
+    <section id="seccion1" class="section" data-scroll-spy>
+      <h2>Reloj Digital y Alarma Sonora</h2>
+      <div id="reloj"></div>
+      <div class="flex-row-center">
+        <div class="borde-button">
+          <button id="activar-reloj">Iniciar Reloj</button>
+          <button id="desactivar-reloj">Detener Reloj</button>
         </div>
-      </section>
-      <!-- _________________________________________________________________________ -->
-      <!-- 2) -->
-      <section id="seccion2" class="section">
-        <h2>eventos del teclado</h2>
-        <article class="stage">
-          <div class="ball"></div>
-        </article>
-      </section>
-      <!-- _________________________________________________________________________ -->
-      <!-- // 6) cuenta regresiva date -->
-      <section id="seccion3" class="section">
-        <h2>cuenta regresiva</h2>
-        <div id="countdown"></div>
-      </section>
-      <!-- -------- -->
-      <section id="seccion4" class="section">
-        <h2>estilos que he usado</h2>
-        <p><pre>
+        <div class="borde-button">
+          <button id="activar-alarma">Iniciar Alarma</button>
+          <button id="desactivar-alarma">Detener Alarma</button>
+        </div>
+        <div class="borde-button">
+          <button id="siuuu">Siuuu</button>
+          <button id="detenerSiuuu">DetenerSiuuu</button>
+        </div>
+        <div class="borde-button">
+          <button id="explicaSiuuu">ExplicaSiuuu</button>
+          <button id="detenerExplicaSiuuu">DetenerExplicaSiuuu</button>
+        </div>
+        <!-- 3) alarma digital  -->
+        <!-- <audio src="./assets/alarma.mp3" controls id="alarma"></audio> -->
+        <audio src="./assets/Gallo despertador.mp3" id="alarma"></audio>
+        <audio src="./assets/CR7 Muchas gracias aficion. SIUUUU.mp3" id="siuuuSonido"></audio>
+        <audio src="./assets/Cristiano Ronaldo explica.mp3" id="explicaSiuuuSonido"></audio>
+      </div>
+    </section>
+    <!-- _________________________________________________________________________ -->
+    <!-- 2) -->
+    <section id="seccion2" class="section">
+      <h2>eventos del teclado</h2>
+      <article class="stage">
+        <div class="ball"></div>
+      </article>
+    </section>
+    <!-- _________________________________________________________________________ -->
+    <!-- // 6) cuenta regresiva date -->
+    <section id="seccion3" class="section">
+      <h2>cuenta regresiva</h2>
+      <div class="borde-button">
+        <button id="activarRegresiba">activar cuenta regresiva</button>
+        <button id="desactivarRegresiba">desactivar cuenta regresiva</button>
+      </div>
+      <div id="countdown"></div>
+    </section>
+    <!-- -------- -->
+    <section id="seccion4" class="section">
+      <h2>estilos que he usado</h2>
+      <p>
+      <pre>
+        <div class="container-button">
+          <button><a href="#colores_textos-contenedores">colores letras y contenedores</a></button>
+          <button><a href="#textos">textos</a></button>
+          <button><a href="#contenedores">contenedores</a></button>
+          <button><a href="#input">input</a></button>
+          <button><a href="#imagenes">imagenes</a></button>
+          <button><a href="#colores-degradados">colores degradados</a></button>
+          <button><a href="#position">position</a></button>
+          <button><a href="#flex">flex</a></button>
+        </div>
 para recetear esos valores en todo el body
 *{margin: 0; padding: 0; box-sizing: border-box;} para resetear los valores que trae el body
 *{box-sizing: border-box;}
@@ -116,571 +130,626 @@ para eliminar los flotados se hace juntos con un div- class=clearfix -div .clear
     --colorhover: blue;
     --colortitulo: black;
 }
+<h4 id="colores_textos-contenedores" style="margin-bottom:0px;color:red"">tipos de colores para letras o cajas</h4>
+color: rgba(red, green, blue, alpha);  alpha= transparencia, van del 0 al 255 los colores rgba 
+color: rgba(0, 255, 0, 1); == verde
+color: red; -- el nombre del color directamente 
+color: #ff0000; -- Códigos hexadecimales
+color: hsla(hue, saturation, lightness, alpha); -- Códigos HSLA (con transparencia)
+opacity:0.7;---------------------------- para volver mas clarito el color
+color: darken(#537266,20%);- - - - - - - para oscurecer un color el tanto porciento que queramos
+background: lighten(#822225,15%); - - - -para aclarar un color el tanto porciento que queramos
+<h4 id="textos" style="margin-bottom:0px;color:red"">textos</h4>
+en google fonts escojo la letra despues escojo los grosores que yo quiera usar 100 300 400 500 900 ya seleccionadas mis 
+letras le doy click embed me da el link que coloco en el head y css font-family que coloco en css
+:root{font-size:62.5% }    ------ saco en porcentaje en vase a 16px seria 10px 
+font-size:10vw ---- darle el tamaño con el tamaño de la pantalla es bien porque se adapta al tamaño de pantalla si ponernos 
+a hacer tantos @medias 100 es el 100%
+
+font-size:20px; ----tamaño del texto en toda la web o en la etiqueta donde tenga el texto que quiero modificar
+padding-top: calc(50vh - 50px); --- para que mi caja se coloque en el medio de la pantalla la mitad vh y la mitad del height 
+de titulo 
+      
+letter-spacing: 4px; -- espacio entre las letras
+letter-spacing: -0.01rem; -- esto es para que la letra se pegue mas
+line-height: 100px; -- texto dentro de una caja con el mismo height de 100px me centrara este texto
+line-height: 75px; -- distancia entre las lineas si es una sola se creara como un paddin del texto
+line-height:2.5; -- para separar las lineas
+line-height:1; -- para unir las lineas -----------50px agrandaremos el espacio 
+
+text-transform: uppercase; -- coloca las letras en mayuscula
+text-transform: lowercase; coloca las letras en minuscula
+text-align: justify; - - para que se alinee el texto a los dos lados pero me deja espacios por dentro entre palabras
+text-align: center; - - para que el texto se centre
+text-align: left; ------ para que se alinee a la izquierda 
+text-shadow: none; ------------- elimina la sombra si la trae por defecto
+text-decoration: overline;underline;line-through;blink,none - -para subrayar por debajo por encima textos, linea como una tacha en la palabra
+
+font-family:arial,helvetica,sans-serif; ----fuente para el documento completo varias por si el navegador no tiene una tome la otra 
+font-style:italic;  --estilo de la letra hay varias pero con esto me toma la que yo quiera de mi font-family
+
+font-weight:14px; 100 900 de grosor- - -tamaño o grosor  del texto segun la fuente
+font-weight: bold;- -para que se vuelva mas gruesa la letra*
+*{font-size:62.5%} esto hara que 1rem enlos textos equivalga a 10px ser un numero entero mas facil de manejar  
+
+white-space:pre-wrap;   Los espacios en blanco se respetan exactamente como están en el HTML y el texto no se ajusta hasta que hay un salto de línea en el código.
           
-- tipos de colores para letras o cajas
-      color: rgba(red, green, blue, alpha);  alpha= transparencia, van del 0 al 255 los colores rgba 
-      color: rgba(0, 255, 0, 1); == verde
-      color: red; -- el nombre del color directamente 
-      color: #ff0000; -- Códigos hexadecimales
-      color: hsla(hue, saturation, lightness, alpha); -- Códigos HSLA (con transparencia)
-      opacity:0.7;---------------------------- para volver mas clarito el color
-      color: darken(#537266,20%);- - - - - - - para oscurecer un color el tanto porciento que queramos
-      background: lighten(#822225,15%); - - - -para aclarar un color el tanto porciento que queramos
+<h4 id="contenedores" style="margin-bottom:0px;color:red"">contenedores</h4>
+- javi recomienda hacer modificaciones al ancho width que el alto height sea automatico a menos que vaya a tener una altura especifica para eso esta el padding y margin
+
+width:max-conten; para que el ancho del contenedor se ajuste al texto y no se desborde
+
+box-shadow: 0px 0px 2px 2px red;- - - - /*sombra ((( 1positivo=derecha,negativo=izquierda 2 positivo=abajo, negativo=arriba 3 difuminacion 4 propagacion )))
+-webkit-box-shadow:0px 0px 2px 2px red;
+-moz-box-shadow:0px 0px 2px 2px red;  --estas dos etiquetas para que reconoscan el estilo de las sombras en navegadores mas antiguos 
+          
+          
+padding-top: calc(50% - 500px);
+padding : 50px 50px 50px 50px;  --------------(((((arriba, derecha, abajo, izquierda))))
+
+margin: 50px 40px;       ------------------ (((((arriba.abajo ,izquierda derecha)))))
+margin: 50px 50px 50px 50px;  --------------(((((arriba, derecha, abajo, izquierda))))
+margin: auto;  ---- la caja se centrara en el medio de la pantalla hablando de los lados 
+margin-top: calc(50vh - 50px); ----para que mi caja se coloque en el medio de la pantalla la mitad vh y la resta de la mitad del tamaño de la caja
+
+box-shadow: inset 0 0 5px 2px yellow; ---- sombra por dentro de la caja o un input
+
+border:2px solid black;
+background: linear-gradient(red, blue);- - -para colocar porcentajes en cada color
+overflow: hidden;- - para que el contenido que se salga de la caja no se muestre
+overflow: auto;  si es necesario me agrega scroll de forma automatica tanto en x como en y si es necesario
+overflow-y: auto; -- si la pantalla es pequeña me salga el scroll hacia abajo
+.menu_tipos::-webkit-scrollbar-thumb {background: #bf3236; border-radius: 20px;} para darle estilos a las barras de scroll puede que no funcionen en todos los navegadores
+
+background: olive;
+width: 300px;   ----ancho
+width: 100vw; -----me tomara todo el ancho de pantalla (puede que ocurrar fallas dependiendo del navegador
+height: 300px; ----alto
+height: 100vh; ---- me toma todo el alto de pantalla
+height: calc(100vh - 20px); ---- me tomara todo el alto de pantalla menos la pestaña de los iconos de navegacion 
+
+max-width:972px;-----------si la pantalla sigue creciendo este sea el maximo ancho que pueda tener 
   
-- textos
-    en google fonts escojo la letra despues escojo los grosores que yo quiera usar 100 300 400 500 900 ya seleccionadas mis 
-    letras le doy click embed me da el link que coloco en el head y css font-family que coloco en css
-    :root{font-size:62.5% }    ------ saco en porcentaje en vase a 16px seria 10px 
-    font-size:10vw ---- darle el tamaño con el tamaño de la pantalla es bien porque se adapta al tamaño de pantalla si ponernos 
-    a hacer tantos @medias 100 es el 100%
-    
-    font-size:20px; ----tamaño del texto en toda la web o en la etiqueta donde tenga el texto que quiero modificar
-    padding-top: calc(50vh - 50px); --- para que mi caja se coloque en el medio de la pantalla la mitad vh y la mitad del height 
-    de titulo 
-          
-    letter-spacing: 4px; -- espacio entre las letras
-    letter-spacing: -0.01rem; -- esto es para que la letra se pegue mas
-    line-height: 100px; -- texto dentro de una caja con el mismo height de 100px me centrara este texto
-    line-height: 75px; -- distancia entre las lineas si es una sola se creara como un paddin del texto
-    line-height:2.5; -- para separar las lineas
-    line-height:1; -- para unir las lineas -----------50px agrandaremos el espacio 
-    text-transform: uppercase; -- coloca las letras en mayuscula
-          
-          text-transform: lowercase;- - - - - - - - - - - - - -/*coloca las letras en minuscula*/
-          
-          text-align: justify; - -/*para que se alinee el texto a los dos lados pero me deja espacios por dentro */ -- center; me lo centra pero deja espacios a los lados
-          
-           text-align: left; ------ para que se alinee a la izquierda 
-          
-          text-decoration: overline;underline;line-through;blink,none - - - - - - - -/*para subrayar por debajo por encima textos, linea como una tacha en la palabra*/ 
-          
-          font-weight:14px; 100 900 de grosor- - - - - - - - - - - - - - - - - - /*tamaño o grosor  del texto segun la fuente*/
-          
-          font-weight: bold;- - - - - - - - - - - - - - - - - /*para que se vuelva mas gruesa la letra*/
-          
-          text-align: center;- - - - - - - - - - - - - - - - - /*centrar un texto solo etiquetas que funcionen en bloque*/
-          
-          text-shadow: none; --------------------------------- elimina la sombra si la trae por defecto 
-          
-          padding-top: calc(50% - 500px);
-          
-          font-family:arial,helvetica,sans-serif; ----fuente para el documento completo varias por si el navegador no tiene una tome la otra 
-          
-          font-style:italic;  --estilo de la letra hay varias pero con esto me toma la que yo quiera de mi font-family
-          
-          *{font-size:62.5%} esto hara que 1rem enlos textos equivalga a 10px ser un numero entero mas facil de manejar  
-          
-          white-space:pre-wrap;   Los espacios en blanco se respetan exactamente como están en el HTML y el texto no se ajusta hasta que hay un salto de línea en el código.
-          
-          
-          ______contenedores y cajas___________________________________________________________________________________________________________
-          
-          - javi recomienda hacer modificaciones al ancho width que el alto height sea automatico a menos que vaya a tener una altura especifica para eso esta el 
-            padding y margin 
-          - clip derecho inspeccionar se dirige a herramientas para desarrolladores computed: hay puedo ver el cuadro con su padding margin y border 
-          
-          *{     ------ con esto receteo los valores que trae de fabrica y todo comenzara desde el 100% de la pantalla sin ninguna separacion 
-              margin: 0;
-              padding: 0;
-              box-sizing: border-box; -- lacaja no crecera hacialos lados solo hacia adentro ni el borde ni el padding me modifiac el tamaño de la caja
-          }
-          
-          display: inline; ----lo trae de serie las etiquetas inline estas etiquetas o me toman algunos css e cajas puede que se monten sobre otra imagen 
-          
-          display: inline-block;  ---- se seguira comportando el linea pero me tomara los css normales de una caja y no se montara nada 
-          
-          text-align: center;
-          
-          border:2px solid black;
-          
-          box-shadow: 0px 0px 2px 2px red;- - - - /*sombra ((( 1positivo=derecha,negativo=izquierda 2 positivo=abajo, negativo=arriba 3 difuminacion 4 propagacion )))
-          -webkit-box-shadow:0px 0px 2px 2px red;
-          -moz-box-shadow:0px 0px 2px 2px red;  --estas dos etiquetas para que reconoscan el estilo de las sombras en navegadores mas antiguos 
-          
-          
-          
-          margin: 50px 40px;       ------------------ (((((arriba.abajo ,izquierda derecha)))))
-          
-          margin: 50px 50px 50px 50px;  --------------(((((arriba, derecha, abajo, izquierda))))
-          
-          margin: auto;  ---- la caja se centrara en el medio de la pantalla hablando de los lados 
-          
-          box-shadow: inset 0 0 5px 2px yellow; --------/* sombra por dentro de la caja o un input 
-          
-          background: linear-gradient(red, blue);- - - -/*para colocar porcentajes en cada color*/
-          
-          overflow: hidden;- - - - - - - - - - - - - - -/* para que el contenido que se salga de la caja no se muestre*/
-          
-          overflow: auto;
-          .menu_tipos::-webkit-scrollbar-thumb {
-              background: #bf3236;
-              border-radius: 20px;
-          }
-          
-          background: olive;
-          
-          width: 300px;   ----ancho
-          
-          width: 100vw; --------------------------------/*me tomara todo el ancho de pantalla (puede que ocurrar fallas dependiendo del navegador)
-          
-          height: 300px; ----alto
-          
-          height: calc(100vh - 20px); ------------------/* me tomara todo el alto de pantalla menos la pestaña de los iconos de navegacion 
-          
-          height: 100vh; -------------------------------/* me toma todo el alto de pantalla 
-          
-          margin: 20px;
-          
-          padding: 10px;
-          
-          margin-top: calc(50vh - 50px); - - - - - - -/*para que mi caja se coloque en el medio de la pantalla la mitad vh y la resta de la mitad del tamaño de la caja*/
-           
-          max-width:972px;-----------si la pantalla sigue creciendo este sea el maximo ancho que pueda tener 
-           
-          width: 400px;
-          
-          max-width: 100%;-------- para que cuando haga responsive y llegue al tamaño de pantalla igual al ancho de 400px ocupe todo el ancho de pantalla
-          
-          border-radius: 50%; - - - - - - - - - - - - -/*para que mi caja se vuelva redonda partiendo de una caja cuadrada */
-          
-          border-top:15px;
-          
-          border-rigth:12px;
-          
-          border-radius: 10px 50px 100px 150px; (((((topL,topR,bottomR,bottomL)))))  
-          
-          background:green;
-          
-          background:rgb(25,25,25, 0.5);- - - - - - - -/*de esta manera tambien se puede hacer que el color sea mas transparente*/
-          
-          opacity:0.7;- - - - - - - - - - - - - - - - -/*para colocar el color mas claro */
-          
-          width:max-conten; para que me ocupe todo el contenido sin bajarse la linea 
-          
-          box-shadow: 0px 0px 10px red inset;- - - - - /*inset es para que la sombra se me genere hacia adentro*/
-          
-          border: 0;
-          
-          outline: 0;
-           
-          
-          ________(((((input))))))_________________________________________________________________________________________________________________________
-          text-align: center;    -------------- comensare a escribir el texto dentro del input desde el centro
-           
-          outline: none;    -------------- esto es para que el boton no le aparesca borde
-          
-          border:2px solid black;
-          .btn{
-              margin-top: 10px;
-              margin-left: 5px;
-              padding: 5px;
-              color: #fff;
-              border-radius: 5px;
-              &:hover{
-                  cursor: pointer;
-                  opacity:0.7;
-              }
-          }
-          
-          
-          .ph-center {
-            height: 100px;
-          }
-          .ph-center::-webkit-input-placeholder {
-            text-align: center;
-            line-height: 100px;/* Centrado vertical */
-          }
-          
-          box-shadow: inset 0 0 0 2px blue;  -----para colocar los bordes internos sin que se deforme el contenedor
-          
-          border: 0;
-          
-          outline: 0;
-          
-          .formulario input::placeholder {color: red;}       color del placeholder de todo el formulario 
-          .error::placeholder {color: red;}                  para un input especifico 
-          
-           outline: 0;
-          
-           border: 0;
-          
-          textarea{
-          font-family: inherit
-          resize:none             este estilo es para quitarle la flechita que trae en la esquina para que el usuario no pueda agrandar esa textarea
-          }
-          
-          
-          ______((((imagenes)))))______________________________________________________________________________________________________________________
-          
-          background: url("../img/lines.png") repeat-x; tambien se puede repeat-y un patron en y recordar quitar cover porq este me acomoda la imagen en el espacio que hay 
-          
-          background-image: url("../imagenes/triangulo.jpg");  ---puede ser una imagen guardada en una carpeta o directamente de internet (((el .. es para ir saltando carpetas hasta llegar a que que estoy buscando))) 
-          
-          background-position:center;- - - - - - - - - -/*para que la imagen se centre me mostrara el centro de la imagen */ 
-          
-          background-size:cover; - - - - - - - - - - - -/* la agranda al tamaño de la pantalla en la misma proporcion el ancho, la muestra en el espacio que hay de la mejor manera posible */
-          
-          background-size:100% 100%;
-          
-          background-size: contain;- - - - - - - - - -  /* saca toda la imagen en tamaño real  en el espacio si sobra espacio la repite*/
-          
-          background-repeat: no-repeat ; - - - - - - - -/*para que no se repita con contain pero me le coloca algun color donde se repetia */ 
-          
-          background-attachment: fixed;- - - - - - - - -/*para que la imagen se quede quieta donde la he colocado */  
-          
-          -object-fit: cover;- - - - - - - - - - - - - - /*para que se vea mejor la imagen*/
-           
-          .gray-scale {
-            filter: grayscale(1);   se vuelve la imagen gris 
-          }
-          
-             <img
-                  src="imagenes/imagen-gordita.jpg"
-                  alt="gordita"   ---- si no carga la imagen se vera este nombre 
-                  title="gordita" ---- al pasar el mouse por encima de la imagen aparecera este nombre 
-                  width="500px"   ---- ancho de la imagen 
-                  height="600px"  ---- alto de la imagen 
-                />
-          
-          width:100%;
-          
-          heigth:auto;
-          __________degradados colores degradados_________________________________________________________________________________________________________________________
-          body{
-             width: 100%;
-             height: 100vh;/*para que se muestre en todo el alto de la pantalla*/
-             background: linear-gradient(red, blue);- - - - - - - - - - - - - - -  /*para colocar porcentajes en cada color*/
-             background: linear-gradient(red 30%, blue 70%);- - - - - - - - - - -  /*para colocar porcentajes de cada color*/
-             background: linear-gradient(30deg, red 30%, blue 70%);- - - - - - - - /*grados de desnivel que quiero que salga ese degradado*/
-             background: linear-gradient(to right, red 30%, blue 70%);- - - - - -  /*top. left. bootom de un lado a otro*/
-                                         to top
-                                         to left
-          
-             background: linear-gradient(
-                      darken(#537266,10%),
-                      darken(#537266,20%)- - - - - - - - - - - - - - - - - - - - - /*para colocar diferentes porcentajes de color en una box*/
-            );
-            background: linear-gradient(
-                          #69857a 60%,
-                          transparent 40% - - - - - - - - - - - - - - - - - - - - -/*de esta manera corte el color y la otra parte quedo transparente*/
-                  );
-          }
-          /
-          
-          
-          ______hover maneras de transiciones________________________________________________________________________________________________________________ 
-          transition: 0.5s ease; --si no le coloco para que es estilo es el cambio me tomara todos os cambios que yo tenga con ese mismo tiempo 
-          
-          transition: padding 0.5s ease; -- me tomara el cambio solo para el padding los otros estilos que tenga en el hover me los hara de una vez 
-          
-          
-          
-          
-          
-          ______estilos del menu_____________________________________________________________________________________________________________________________
-          
-          #menu ul{
-            list-style: none;    ---para que ya no me paresca una lista 
-          }
-          
-          .menu ul li{
-            height: 46px;  --- puede ser aqui o no llevar esto y se aplica en a line-height:150px; tamaño del height 150px para que se centre  
-            display: inline-block;
-                  float: left;
-            transition: all 300ms; /*para crear una lista un menu*/
-          }
-          
-          .menu a{
-            display: block;
-            color:white;
-            text-decoration: none;   -------esta es para eliminar la rayita que trae por defecto la etiqueta a
-            (padding-left: 30px;
-            padding-right: 30px;)creo que para colocarle padding tengo que volverla en bloque 
-                  (margin-left: 20px;
-                  margin-right: 20px;)tambien pueo usar margin para separar a los lados 
-                  line-height:150px;
-          
-           a:hover{
-                  color: blue;
-              }
-          
-          ______para crear un borde animado en una caja _________________________________________________________________________________________________
-          .caja:hover{
-          outline-width: 10px;   /*para crear un borde animado en una caja */
-          outline-style: dashed;
-          outline-color: yellow;
-          }
-          
-          ______(((((cosas adicionales))))))___________________________________________________________________________________________________________________________________________
-          float: left;- - - - - - - - - - - - - - - - - - - - - - - - - /*para que un elemento flote si es una lista de izquierda a derecha (1234)*/
-          
-          float:rigth;------------------------------------------------- para que el elemento flote de derecha a izquierda (4321)
-          
-          color:#61dafb !important;
-          
-          ((margin: 40px !important; ------------------------------------ me machaca cuaalquier estilo yme agrega si o si este))  
-          
-          overflow: auto;
-          
-          overflow-y: auto;- - - - - - - -- - - - - - -- - - - - - - -  /*si la pantalla es pequeña me salga el scroll hacia abajo*/
-          
-          cursor: not-allowed;          --con ese estilo me aparece un simbolo de negado para oprimir
-          
-          width: max-content;- - - - - - - - - - - - - - - - - - - - - - /*para que las letras del li en este caso no se me desborden por ser de dos o mas palabras*/
-          
-          height: calc(100% - 60px);- - - - - - - - - - - - - - - - - - -/* menos el alto del header*/
-          
-          
-          ul{
-          clear:both;-----/*para que no se mezcle con los elementos flotados*/
-          cursor: pointer;/*para que aparesca pa manito cuando este sobre el elemento*/
-          
-          
-          
-           z-index: 100; este por encima de todo en el eje z todo lo menor a este numero siempre estara por debajo 
-           z-index: 10;este por debajo del 100
-          
-          transform:rotate(20deg);- - - - - - - - - - - - - - - - - - - /*para que rote una caja los grados deseados - esta es una propiedad que no leen todos los navegadores*/
-          
-          .nav-button:focus:not(:focus-visible){- - - - - - - - - - - - /*esto es para que el boton no le aparesca borde solo si lo hago con el teclado */
-                 outline: none;
-             }
-           outline: none; - - - - - - - - - - - - - - - - - - - - - - - /*para que al darle clip encima del elemento no me le aparezca en borde que sale por defecto*/
-          
-          height: inherit;- - - - - - - - - - - - - - - - - - - - - - - /*heredara del padre su altura*/
-          
-          height: inherit;- - - - - - - - - - - - - - - - - - - - - - - /*para que las imagenes se alineen en la parte superior este es para etiquetas en linea o inline-block*/  
-          
-           problemas en otros navegadores como solucionar 
-          
-          margin-top:0.2px;
-          
-          
-          _______________________________________________________________________________________________________________________________________________________________________
-          
-          .fade{
-              animation-name: fade;- - - - - - - - - - - - - - - - - - -/*capturo con la clase la etiqueta a la cual le voy a hacer una animacion*/ 
-              animation-duration: 1.5s;- - - - - - - - - - - - - - - - -/*el tiempo que durara la animacion*/
-          }
-          
-          @keyframes fade {
-              from {opacity: .4;} - - - - - - - - - - - - - - - - - - - /*dentro de este keyframes coloco lo que quiero que haga esta animacion en este caso un cambio de opacidad*/
-              to{opacity:1;}
-          }
-          
-          
-          
-          
-          
-          _____((((position)))))____________________________________________________________________________________________________________________________________________________
-          position:static  --- es la que trae de serie no me hace nada 
-          
-          position:absolute;/* si la caja que lo contiene tiene una position: relative , comienza posicionado desde hay caso contrario desde el comienzo de la pantalla*/
-          
-          position:relative;/*dentro de su posicion normal o de la caja que lo contiene si modifico su posicion este lo hara desde esa posicion de arranque */
-          
-          position:fixed;/*su posicion inicial sera desde la caja que lo contiene cuando lo intento mover de esa caja los valores que yo le coloque los tomara desde toda 
-                           la pantalla al hacer scroll se movera todo lo de debajo pero este se mantendra siempre en el mismo lugar*/
-          
-          
-          position:sticky;/* al hacer scroll se movera pero no se saldra de el contenedor que lo contiene y solo se le modifica el top si lo uso en un header este sera fijo y el contenido que agrege despues de el saldra despues del header  */
-                              es una especie de fixed pero si permite moverlo un poco
-          top: 0 ;
-          
-          left: 518px ;
-          
-          bottom: 100px ;
-          
-          right:0 ;
-          
-          ____(a) enlaces a otras paginas___________________________________________________________________________________________________________________________________
-          
-           <a href="https://twitter.com/" target="_blank"></a>- - - - - - - - - - - - -/*redirigirnos a twitter target="_blank" para que se abra en otra pestaña*/
-          
-          
-          
-          
-          
-          
-          
-          
-           
-          
-          
-          
-          __________responsive____________________________________________________________________________________________________________________________
-          
-          -tamaños mas comunes para hacer responsive
-           <meta name="viewport" content="width=device-width, initial-scale=1.0"> --------- diferentes resoluciones
-          
-          -360×640 (móvil pequeño)
-          -375×667 (móvil medio)
-          -768*1024 (ipad mini)
-          -1366×768 (ordenador portátil medio)
-          -1440×900 (escritorio medio)
-          -1920×1080 (escritorio grande)
-          
-          
-          
-          480, 768 , 1080
-          -escritorios muy grandes 
-          @media screen and  (min-width: 1200px) {} todo lo que este por encima de esto se modificara
-          
-          -tables en horizontales y escritorios normales
-          @media (min-width: 768px) and (max-width: 1199px) {}
-          
-          -moviles en horizontal o tablets en vertical 
-          @media screen and (max-width: 676px) {}
-          
-          -moviles en vertical
-          @media screen and (max-width: 480px) {}
-          
-          __________display:flex___ d-flex________________________________________________________________________________________________________________________
-          -display:flex; al contenedor padre todos los hijos se colocaran uno al lado del otro en un tamaño de pantalla grande me respetara el width que yo le coloque 
-                        si la pantalla la hago mas pequeña se adactara al tamaño de patalla y ya no me respetara esa medida (me une los elementos margin:0 padding:0)
-                        este contenedor tiene que tener medidas en % sino se vuelve una galleta si le coloco altura el tambien vaa acomodar los elementos espaciados con respecto a esa altura 
-          --((cuando utilizo flex en contenedor padre debe llevar height))--
-          ((horizontal))
-          
-          -flex-direction: row;                   estilo por defecto se colocan al lado izquierdo comienzan de izquierda a derecha  (flex-row)
-          -flex-direction: row-reverse;           si tiene numeros dentro decada elemento estos comienzan alcontrario o al revez    (flex-row-reverse)
-          
-          -flex-direction: column;                los elementos se colocan en columna a la izquierda 1-4 ejemplo justify center es vertical y el aling center horizontal (flex-column))
-          -flex-direction: column-reverse;        4-1 (flex-column-reverse)
-          
-          -flex-wrap:wrap;                        con este si me respeta el width que yo le haya colocado a cada elemento y al hacer responsive cuando ya no quepan elementos en esa linea me los manda a la linea de abajo en ((px))
-          -flex-wrap:wrap-reverse;                (flex-wrap)
-          
-          ((con justify-content ordeno horizontalmente))
-           
-          justify-content: flex-start;           las cajas en el comienzo del contenedor                                                       (justify-content-start)
-          justify-content: flex-end;             elementos dentro del contenedor al final de el                                                (justify-content-end)
-          justify-content: center;               elementos dentro de la caja al centro                                                         (justify-content-center)
-          justify-content: space-around;         separa las cajas con espacios uniformes                                                       (justify-content-around)
-          justify-content: space-between;        si son tres elementos dos a los lados y uno en el centro                                      (justify-content-between)
-          justify-content: space-evenly;         los separa con espaciados mas centrados entre ellos                                           (justify-content-evenly)
-          
-          ((aling-items ordeno verticalmente))
-          
-          aling-items:flex-star;                 los tres elementos se posicionan alcomienzo parte superior                                    (align-items-start)
-          aling-items:flex-end;                  los tres elementos se posicionan alcomienzo parte inferior                                    (align-items-end)
-          aling-items:center;                    me lo centra de arriba abajo                                                                  (align-items-center)
-          aling-items:stretch;                   lo trae por defecto intenta ocupar el ancho maximo de la caja si el item no le coloque altura (align-items-stretch)
-                                                                                                                                                aling-items-between
-          
-          
-          ((vertical))
-          align-content:space-around;            espacios uniformes
-          align-content:space-between;           hacia los lados 
-          align-content:space-evenly;            espacios uniformes mas centrados   (align-items-stretch) 
-          align-items: baseline;                 se me alinea verticalmente tomando en cuenta la base del elemento interno si son numero sque tengan diferentes tamaños (align-items-baseline)
-          
-          ((forma mas corta de escribir esas propiedades en flex))
-          
-          flex-flow: row wrap;
-          
-          ((otra propiedad a los items a hijos del contenedor ))
-          
-          order: 1;
-          order: 2;             de esta manera puedo darle orden a los items de la manera que yo quiera 
-          
-          flex-grow: 10 
-          flex-grow: 1          cuanto derecho a espacio tiene para utilizar su elemento 
-          
-          flex-shrink:0; no puede encogerse menos del tamaño que tiene en si width
-          
-          flex-basis: 200px o 20% ; es como el width pero en flex 
-          
-          flex: 1 10 200px; una forma mas corta de colocar las tres propiedades anteriores 
-          
-          
-          _______________seudo elementos______________________________________________________________________________________________________________________________________________________
-          
-          
-            .titulo.titulo1{ dos nombres en el mismo class los separa solo un punto solo me modifica esa etiqueta 
-              color: yellow;
-              background-color: rgb(58, 38, 38);
-           }
-          ______class,id,etiqueta todos juntos___________________________________________________________________________________________________
-          
-          .parrafo, #parrafopegado, h1{ class, id, h1 todas juntas si son de diferentes etiquetas se separa con una coma seguido de su simbolo que le corresponda 
-              color: yellowgreen;
-           }
-          
-          .titulo p{}
-          
-          <progress value="80" min="0" max="100"></progress>
-          progress {
-              width: 100%;
-              height: 1rem;
-              background-color: var(--gray-color);
-            }
-            
-            progress::-webkit-progress-bar {
-              background-color: var(--gray-color);
-            }
-            
-            progress::-webkit-progress-value {  /*google chrom zafari e*/
-              background-color: var(--gray-dark-color);
-            }
-            
-            progress::-moz-progress-bar {    /*firekox*/
-              background-color: var(--gray-dark-color);
-            }
-          
-          
-          </pre></p>
-      </section>
-      <section id="seccion5" class="section">
-        <h2>seccion 5</h2>
-      </section>
-      <section id="seccion6" class="section">
-        <h2>seccion 6</h2>
-      </section>
-      <section id="seccion7" class="section">
-        <h2>seccio
-      <section id="seccion8" class="section">
-        <h2>seccion 8</h2>
-      </section>
-      <section id="seccion9" class="section">
-        <h2>seccion 9</h2>
-      </section>
-      <section id="seccion10" class="section">
-        <h2>seccion 10</h2>
-      </section>
-      <section id="seccion11" class="section">
-        <h2>seccion 11</h2>
-      </section>
-      <section id="seccion12" class="section">
-        <h2>seccion 12</h2>
-      </section>
-      <section id="seccion13" class="section">
-        <h2>seccion 13</h2>
-      </section>
-      <section id="seccion14" class="section">
-        <h2>seccion 14</h2>
-      </section>
-      <section id="seccion15" class="section">
-        <h2>seccion 15</h2>
-      </section>
-      <section id="seccion16" class="section">
-        <h2>seccion 16</h2>
-      </section>
-      <section id="seccion17" class="section">
-        <h2>seccion 17</h2>
-      </section>
-      <section id="seccion18" class="section">
-        <h2>seccion 18</h2>
-      </section>
-      <section id="seccion19" class="section">
-        <h2>seccion 19</h2>
-      </section>
-      <section id="seccion20" class="section">
-        <h2>seccion 20</h2>
-      </section>
-    </main>
-     <button class="scroll-top-btn hidden">&#11014;</button><!-- 7) ScrollTopButton  -->
-    <script src="./08_dom-ejercicio-practico.js" type="module"></script>
-    <!-- le tengo que especificar el atributo type="module ya que voy a trabajar con modulos" -->
-  </body>
+width: 400px;
+max-width: 100%;-------- para que cuando haga responsive y llegue al tamaño de pantalla igual al ancho de 400px ocupe todo el ancho de pantalla
+
+border-top:15px;
+border-top: 15px solid #ff0000;
+border-bottom: 15px solid #000000;
+border-rigth:12px;
+border-radius: 10px 50px 100px 150px; (((((topL,topR,bottomR,bottomL))))) 
+border-radius: 50%; ---- para que mi caja se vuelva redonda partiendo de una caja cuadrada 
+border: 0;
+outline: 0; me elimina el borde que sale al hacer foco que traen predeterminado el navegador
+
+cursor: not-allowed; --- con ese estilo me aparece un simbolo de negado para oprimir
+
+<h4 id="input" style="margin-bottom:0px;color:red"">input</h4>
+text-align: center;    -------------- comensare a escribir el texto dentro del input desde el centro
+outline: none;    -------------- esto es para que el boton no le aparesca borde
+border:2px solid black;
+.btn{margin-top: 10px;margin-left: 5px;padding: 5px;color: #fff;border-radius: 5px;
+    &:hover{
+        cursor: pointer; -- para que me aparezca la manita cuando el cursor haga hover
+        opacity:0.7; 
+    }
+}
+.ph-center {height: 100px;}
+.ph-center::-webkit-input-placeholder {text-align: center;line-height: 100px;/* Centrado vertical */}
+input::placeholder {color: red;}----- color del placeholder de todo el formulario 
+.error::placeholder {color: red;}---- para un input especifico 
+textarea{font-family: inherit; resize:none; este estilo es para quitarle la flechita que trae en la esquina para que el usuario no pueda agrandar esa textarea}
+          
+<h4 id="imagenes" style="margin-bottom:0px;color:red"">imagenes</h4>                   
+background: url("../img/lines.png") repeat-x; tambien se puede repeat-y un patron en y recordar quitar cover porq este me acomoda la imagen en el espacio que hay 
+background-image: url("../imagenes/triangulo.jpg"); --- puede ser una imagen guardada en una carpeta o directamente de internet 
+background-position:center; --- para que la imagen se centre me mostrara el centro de la imagen
+background-size:cover; ---- la agranda al tamaño de la pantalla en la misma proporcion el ancho, la muestra en el espacio que hay de la mejor manera posible
+background-size:100% 100%; --- ancho y alto 
+background-size: contain;  --- saca toda la imagen en tamaño real  en el espacio si sobra espacio la repite
+background-repeat: no-repeat; --- para que no se repita con contain pero me le coloca algun color donde se repetia 
+background-attachment: fixed; --- para que la imagen se quede quieta donde la he colocado 
+.mi-elemento {width: 300px; /* Ancho del contenedor */height: 200px; /* Altura del contenedor */object-fit: cover;} 
+object-fit: cover; --- para que se vea mejor la imagen
+.gray-scale {filter: grayscale(1);   se vuelve la imagen gris}
+<h4 id="colores-degradados" style="margin-bottom:0px;color:red"">colores degradados</h4> 
+body{width: 100%;height: 100vh; ---para que se muestre en todo el alto de la pantalla*/ background: linear-gradient(red, blue);---para colocar porcentajes en cada color
+background: linear-gradient(red 30%, blue 70%);---/*para colocar porcentajes de cada color*/
+background: linear-gradient(30deg, red 30%, blue 70%);---/*grados de desnivel que quiero que salga ese degradado*/
+background: linear-gradient(to right, red 30%, blue 70%);---/*top. left. bootom de un lado a otro*/--- to top --- to left
+background: linear-gradient(darken(#537266,10%),darken(#537266,20%)---/*para colocar diferentes porcentajes de color en una box*/);
+background: linear-gradient(#69857a 60%,transparent 40% /*de esta manera corte el color y la otra parte quedo transparente*/);}
+<h4 style="margin-bottom:0px;color:red"">hover maneras de transiciones</h4>
+.otro-elemento {font-size: 16px;color: green;border:2px solid;transition: all 0.3s ease; }
+.otro-elemento:hover {color: red; /*se activará la transición si le coloco all para cualquier estilo dentro del hover*/} 
+transition: 0.5s ease; -- si no le coloco para que es estilo es el cambio me tomara todos los cambios que hayan en el hover 
+transition: padding 0.5s ease; -- me tomara el cambio solo para el padding si coloco otros estilos dentro del hover me los hara de una vez
+transition: all 0.3s ease; --- me tomara la transicion para todoslos cambios que se hagan en el hover
+<h4 style="margin-bottom:0px;color:red"">estilos del menu</h4>          
+#menu ul{list-style: none;    ---para que ya no me paresca una lista }
+.menu ul li{height: 46px;  --- puede ser aqui o no llevar esto y se aplica en a line-height:150px; tamaño del height 150px para que se centre  display: inline-block;
+float: left;transition: all 300ms; /*para crear una lista un menu*/}
+.menu a{display: block;color:white;text-decoration: none; --- esta es para eliminar la rayita que trae por defecto la etiqueta a
+padding-left: 30px;padding-right: 30px;creo que para colocarle padding tengo que volverla en bloque 
+margin-left: 20px;margin-right: 20px;)tambien puedo usar margin para separar a los lados 
+line-height:150px;
+a:hover{color: blue;}
+<h4 style="margin-bottom:0px;color:red"">para crear un borde animado en una caja</h4>         
+.caja:hover{outline-width: 10px;   /*para crear un borde animado en una caja */outline-style: dashed;outline-color: yellow;}
+<h4 style="margin-bottom:0px;color:red"">cosas adicionales</h4> 
+float: left; --- para que un elemento flote si es una lista de izquierda a derecha (1234)
+float:rigth; --- para que el elemento flote de derecha a izquierda (4321)
+color:#61dafb !important;
+width: max-content;---para que las letras del li en este caso no se me desborden por ser de dos o mas palabras          
+z-index: 100; este por encima de todo en el eje z todo lo menor a este numero siempre estara por debajo 
+z-index: 10;este por debajo del 100
+<h4 style="margin-bottom:0px;color:red"">animacion por estudiar</h4>
+transform:rotate(20deg); -- para que rote una caja los grados deseados - esta es una propiedad que no leen todos los navegadores
+.nav-button:focus:not(:focus-visible){ -- esto es para que el boton no le aparesca borde solo si lo hago con el teclado
+    outline: none;
+}
+outline: none; --- para que al darle clip encima del elemento no me le aparezca en borde que sale por defecto*
+height:inherit; -- heredara del padre su altura
+.fade{
+    animation-name: fade;- - - - - - - - - - - - - - - - - - -/*capturo con la clase la etiqueta a la cual le voy a hacer una animacion*/ 
+    animation-duration: 1.5s;- - - - - - - - - - - - - - - - -/*el tiempo que durara la animacion*/
+}
+@keyframes fade {
+    from {opacity: .4;} - - - - - - - - - - - - - - - - - - - /*dentro de este keyframes coloco lo que quiero que haga esta animacion en este caso un cambio de opacidad*/
+    to{opacity:1;}
+}
+<h4 id="position" style="margin-bottom:0px;color:red"">position</h4>
+position:static  --- es la que trae de serie no me hace nada 
+position:absolute; -- si la caja que lo contiene tiene una position: relative , comienza posicionado desde hay caso contrario desde el comienzo de la pantalla
+position:relative; -- dentro de su posicion normal o de la caja que lo contiene si modifico su posicion este lo hara desde esa posicion de arranque
+position:fixed; -- su posicion inicial sera desde la caja que lo contiene cuando lo intento mover de esa caja los valores que yo le coloque los tomara desde toda 
+la pantalla al hacer scroll se movera todo lo de debajo pero este se mantendra siempre en el mismo lugar
+position:sticky; -- al hacer scroll se movera pero no se saldra de el contenedor que lo contiene y solo se le modifica el top si lo uso en un header este sera fijo y el contenido que agrege 
+despues de el saldra despues del header es una especie de fixed pero si permite moverlo un poco
+<h4 style="margin-bottom:0px;color:red"">enlaces a otras paginas</h4>
+a href="https://twitter.com/" target="_blank" a -- redirigirnos a twitter target="_blank" para que se abra en otra pestaña
+<h4 style="margin-bottom:0px;color:red"">responsive</h4>
+tamaños mas comunes para hacer responsive 
+meta name="viewport" content="width=device-width, initial-scale=1.0" --------- diferentes resoluciones etiqueta con los atributos para hacer responsive
+-360×640 (móvil pequeño)
+-375×667 (móvil medio)
+-768*1024 (ipad mini)
+-1366×768 (ordenador portátil medio)
+-1440×900 (escritorio medio)
+-1920×1080 (escritorio grande)
+-escritorios muy grandes 
+@media screen and  (min-width: 1200px) {} todo lo que este por encima de esto se modificara
+
+-tables en horizontales y escritorios normales
+@media (min-width: 768px) and (max-width: 1199px) {}
+
+-moviles en horizontal o tablets en vertical 
+@media screen and (max-width: 676px) {}
+
+-moviles en vertical
+@media screen and (max-width: 480px) {}
+<h4 id="flex" style="margin-bottom:0px;color:blue">display:flex</h4>
+-display:flex; al contenedor padre todos los hijos se colocaran uno al lado del otro en un tamaño de pantalla grande me respetara el width que yo le coloque 
+si la pantalla la hago mas pequeña se adactara al tamaño de patalla y ya no me respetara esa medida (me une los elementos margin:0 padding:0)
+este contenedor tiene que tener medidas en % sino se vuelve una galleta si le coloco altura el tambien vaa acomodar los elementos espaciados con respecto a esa altura 
+--((cuando utilizo flex en contenedor padre debe llevar height))--
+<h5 style="margin-bottom:0px;color:aqua">((horizontal))</h5>
+-flex-direction: row;                   estilo por defecto se colocan al lado izquierdo comienzan de izquierda a derecha
+-flex-direction: row-reverse;           si tiene numeros dentro de cada elemento estos comienzan alcontrario o al revez
+-flex-direction: column;                los elementos se colocan en columna a la izquierda 1-4 ejemplo justify center es vertical y el aling center horizontal (flex-column))
+-flex-direction: column-reverse;        4-1 (flex-column-reverse)
+-flex-wrap:wrap;                        con este si me respeta el width que yo le haya colocado a cada elemento y al hacer responsive cuando ya no quepan elementos en esa linea me los manda a la linea de abajo en ((px))
+-flex-wrap:wrap-reverse;                (flex-wrap)
+<h5 style="margin-bottom:0px;color:aqua">((con justify-content ordeno horizontalmente))</h5>
+justify-content: flex-start;           las cajas en el comienzo del contenedor                                                       (justify-content-start)
+justify-content: flex-end;             elementos dentro del contenedor al final de el                                                (justify-content-end)
+justify-content: center;               elementos dentro de la caja al centro                                                         (justify-content-center)
+justify-content: space-around;         separa las cajas con espacios uniformes                                                       (justify-content-around)
+justify-content: space-between;        si son tres elementos dos a los lados y uno en el centro                                      (justify-content-between)
+justify-content: space-evenly;         los separa con espaciados mas centrados entre ellos                                           (justify-content-evenly)
+
+<h5 style="margin-bottom:0px;color:aqua">((aling-items ordeno verticalmente))</h5>         
+aling-items:flex-star;                 los tres elementos se posicionan alcomienzo parte superior                                    (align-items-start)
+aling-items:flex-end;                  los tres elementos se posicionan alcomienzo parte inferior                                    (align-items-end)
+aling-items:center;                    me lo centra de arriba abajo                                                                  (align-items-center)
+aling-items:stretch;                   lo trae por defecto intenta ocupar el ancho maximo de la caja si el item no le coloque altura (align-items-stretch)
+                                                                                                                                      aling-items-between
+<h5 style="margin-bottom:0px;color:aqua">((vertical))</h5>         
+align-content:space-around;            espacios uniformes
+align-content:space-between;           hacia los lados 
+align-content:space-evenly;            espacios uniformes mas centrados   (align-items-stretch) 
+align-items: baseline;                 se me alinea verticalmente tomando en cuenta la base del elemento interno si son numero sque tengan diferentes tamaños (align-items-baseline)
+
+<h5 style="margin-bottom:0px;color:aqua">((forma mas corta de escribir esas propiedades en flex))</h5>        
+flex-flow: row wrap;
+
+((otra propiedad a los items a hijos del contenedor ))
+
+order: 1;
+order: 2;             de esta manera puedo darle orden a los items de la manera que yo quiera 
+flex-grow: 10 
+flex-grow: 1          cuanto derecho a espacio tiene para utilizar su elemento 
+flex-shrink:0; no puede encogerse menos del tamaño que tiene en su width
+flex-basis: 200px o 20% ; es como el width pero en flex 
+flex: 1 10 200px; una forma mas corta de colocar las tres propiedades anteriores 
+<h4 style="margin-bottom:0px;color:blue">seudo elementos</h4>
+.titulo.titulo1{ dos nombres en el mismo class los separa solo un punto solo me modifica esa etiqueta 
+  color: yellow;
+  background-color: rgb(58, 38, 38);
+}
+<h5 style="margin-bottom:0px;color:aqua">class,id,etiqueta todos juntos</h5>
+.parrafo, #parrafopegado, h1{ class, id, h1 todas juntas si son de diferentes etiquetas se separa con una coma seguido de su simbolo que le corresponda
+      color: yellowgreen;
+}
+.titulo p{}
+<progress value="80" min="0" max="100"></progress> etiqueta de progreso
+<progress value="60" min="0" max="100"></progress>
+progress {
+    width: 100%;
+    height: 1rem;
+    background-color: var(--gray-color);
+  }
+  
+  progress::-webkit-progress-bar {
+    background-color: var(--gray-color);
+  }
+  
+  progress::-webkit-progress-value {  /*google chrom zafari e*/
+    background-color: var(--gray-dark-color);
+  }
+  
+  progress::-moz-progress-bar {    /*firekox*/
+    background-color: var(--gray-dark-color);
+  }
+.text-truncate {overflow: hidden;text-overflow: ellipsis; white-space: nowrap;} clase de boostrap para que no se desborde un texto cuando finaliza en espacio salen puntos 
+          </pre>
+      </p>
+
+    </section> <!--fin de la seccion 4  mis estilos  -->
+    <section id="seccion5" class="section">
+      <h2>bootstrap 4.6 y estilos hkas</h2>
+      <p>
+      <pre>
+            <h3 style="margin-bottom:0px; margin-top: 0px;">bootstrap 4.6</h3>
+d-flex 
+justify-content-start  elementos o las cajas en el comienzo del contenedor   
+justify-content-end  elementos dentro del contenedor al final
+justify-content-center elementos dentro de la caja al centro
+justify-content-around separa las cajas con espacios uniformes
+justify-content-between si son tres elementos dos a los lados y uno en el centro
+justify-content-evenly los separa con espaciados mas centrados entre ellos
+
+flex-row por defecto elementos en bloque se colocaran a la derecha al decir d-flex 
+flex-row-reverse los elementos que tenga e colocaran al revés de lo que esta en el html 
+
+flex-column los elementos en bloque se colocaran uno encima del otro 
+flex-column-reverse elementos al reveés de lo que los coloque en columna
+flex-wrap hace que se respete el width que se le haya colocado al contenedor si no cabe salta la linea
+flex-grow-1 si mi padre es flex y tengo dos elementos colocando este en el primero ocupa todo el espacio que sobre manda a la derecha los demas elementos 
+flex-xxl-grow-0 en un tamaño grande de pantalla volvera a ser normal no ocupara el resto de pantalla 
+
+text-nowrap
+text-wrap  white-space: normal funciona de la misma manera si el texto se va a desbordar salta de linea 
+text-truncate este es para que el texto que no quepa no se muestre todo y salgan puntos suspensivos al final
+
+fw-bolder   {font-weight: bolder} me oscurece el texto
+
+.mw-100 , min-vw-100 , .w-25 , .w-50 , .w-75 , .w-100 , w-auto
+
+mr-0 a 5 , ml-0 a 5 , mt-0 a 5 , mb-0 a 5  mr-sm-0 , md , lg , xl , xll  igual para padding
+
+.modal-sm , .modal-lg , .modal-xl , tamaño del modal 
+.modal-dialog-centered para que el modal me salga en todo le centro de la pantalla
+
+position-relative  position-absolute  position-static
+            <h3 style="margin-bottom:0px; margin-top: 0px;">estilos hkas</h3>
+            <h4 style="margin-bottom:0px; margin-top: 0px;">tamaños en porcentaje</h4>
+.w-10 , .w-15 , .w-20 , .w-20 , .w-25 , .w-30 , .w-48 , .w-50 , .w-85  , .w-90 , .w-95 , .w-98 , .w-100 ,
+.white-space-normal clase {white-space: normal; -> text-nowrap estilos para que no se desborde un texto continuo si no cabe salta la linea}
+
+col-xl->= col-lg->=1200 col-md->=992 col-sm->=768 col-xs-<768 puntos de quiebre boostrap
+
+          </pre>
+      </p>
+    </section>
+    <section id="seccion6" class="section">
+      <h2>git</h2>
+      <p>
+      <pre>
+git init para comenzar a seguir un proyecto nuevo o ya existente que no este seguido 
+git commit -am "" ,agrega todos los archivos y guarda el mensaje 
+git commit --amend -m "" "nuevo mensaje para el último mismo commit",eliminar el ultimo commit
+git submodule update --remote --merge ,obtener ultimos cambios del remoto
+git checkout (codigo del commit) me devuelvo a esa rama
+git fetch muestra los cambios que hay en el remoto sin integrarlos para ver que cambiaron
+git checkout -b nombre_de_tu_rama  crear una nueva rama con git 
+
+git reset --soft HEAD~1 elimino el commit y me devuelve pero me mantiene los cambios en el stash para agregar mas cosas
+git reset --hard HEAD~1 elimina el commit me elimina los cambios y me devuelve a donde comence osea deja donde estaba la cosa
+
+git chiri  tengo que investigar nuevamente como funciona
+<p style="margin-bottom:0px;color:rgba(51, 0, 255, 0.75);font-size:16px;font-weight: bold;">mas usudos</p>
+git commit --amend --no-edit ,commit de nuevos cambios agregados al mismo commit anterior sin editar el mensaje del último commit
+git merge --abort con este comando aborto el merge si veo que los conflictos son por la lentitud de vscode
+<p style="margin-bottom:0px;color:rgba(51, 0, 255, 0.75);font-size:16px;font-weight: bold;">stash</p>
+git stash -u me guardara los cambios que alla hecho en una rama que este seguida o no por git
+git stash sin -u me guarda los cambios que son seguidos por git la primera opcion es mas segura
+git stash list me muestra la lista de los stash
+git stash pop me agrega el primer stash a la rama donde estoy parado y de una vez lo borra 
+git stash apply me agrega el primer stash a la rama que estoy trabajando y no me borra nada
+git stash drop stash@{1} elimina uno en especifico
+git stash apply stash@{2} me trae los cambios de uno especifico y no me borra nada 
+git stash clear me limpia todo el stash
+https://www.atlassian.com/es/git/tutorials/saving-changes/git-stash#stashing-your-work  en esta url hablan del stash
+<p style="margin-bottom:0px;color:rgba(51, 0, 255, 0.75);font-size:16px;font-weight: bold;">eliminar merge</p>
+git merge --abort con este comando aborto el merge si veo que los conflictos son por la lentitud de vscode o estan feos los conflictos
+git reset --soft HEAD~1 elimino el commit pero me mantiene los cambios que yo alla hecho en esa rama que agrege  
+git reset --hard HEAD~1 elimina el commit me elimina los cambios y me devuelve a donde comence osea deja donde estaba la cosa no me guarda lo que llevaba
+git reset --hard 300b20870670abffb2f5c475fb454ae81950345e regreso a antes del merge se regresan los cambios a donde estaba para desaser un merge o pull
+git cherry-pick gdgdggdgdgsye si varias personas trabajamos en una rama y solo quiero sacar los cambios que yo hice y pasarlos a otra rama
+
+git reset --hard master@{"30 minutes may"} ago de esta manera elimino un pull o merge de un tiempo atras y me queda donde estaba me elimina los galos que alla introducido
+git reset --hard rama donde necesito regresar cambios@{"30 minutes may"} no esto como que siempre apunta a master
+
+    </pre>
+  </p>
+</section>
+<section id="seccion7" class="section">
+<h2>hkas</h2>
+<div class="container-button">
+  <button><a href="#solicitud-de-PR">solicitud de PR</a></button>
+  <button><a href="#ramas-en-el-proyecto">creacion de ramas en el proyecto</a></button>
+  <button><a href="#sql-actualizar">sql servers como ingresar data y actualizar</a></button>
+  <button><a href="#servicios">servicios de cada modulo</a></button>
+  <button><a href="#logeo">credenciales de logeo</a></button>
+</div>
+<p>
+  <pre>
+@*de esta manera se comenta codigo cshtml*@
+h.castro@nelumbo.com.co
+Nelumbo2022.
+1) docker-compose up aliviauth 
+2) docker-compose up gateway
+3) docker-compose up lookuptables
+
+4) docker-compose build mvc
+4.1)docker-compose up mvc 
+5) (comandos para actualizar cambios al refrescar)
+docker-compose -f docker-compose.yml -f docker-compose-dev.yml build mvc
+docker-compose -f docker-compose.yml -f docker-compose-dev.yml up mvc
+docker-compose up providers claims members payers
+docker-compose build providers
+docker-compose build claims
+<p id="solicitud-de-PR" style="margin-bottom:0px;color:rgba(51, 0, 255, 0.75);font-size:16px;font-weight: bold;">solicitud de PR</p>
+(PR) 7580 7587 tarea ya revizada
+1) repos , 2) pull requests  ,3) boton azul new pull request,
+4) aqui busco la rama de la que voy a subir cambios  me aparece la rama into > UAT es a donde se hara la solicitud del pr
+5) si no aparecen los nombres de los commit de doy en agregar titulo detitle 7563 al principio sin el numeral pego cualquiera de los commit (add commit messages) agregar el commit (creo que si ya sale agregado en el ticket este boton ya no me aparece), 
+6) reviso que solo esten los cambios que yo agrege para no enviar algo que no sea lo que yo cambie,
+siempre que diga merge PR todo esta bien en los commit revizo que solo hayan cambios mis y listo
+7) si todo bien enviar (crear) ,8) me tiene que salir en verde exitoso (No merge conflicts)
+8)(PR min.css conflicto PR) siempre que modifique archivos minificados con una rama salida de master al hacer el PR saldran conflictos porq los PR son a UAT esto se soluciona con pasarme a UAT git pull crear una rama igual a la que trabaje y se creo el conflicto
+_UAT parado en esta nueva rama hago merge de la rama que creo el conflicto o la rama en la que trabaje con la rama que cree se genera el mismo conflicto que el del PR, resuelvo el conflicto minificando de nuevo el archivo verificar que todo quedo bien con el minificado  
+git add . > git commit no coloco mensaje para que quede un mejor control de lo que causo el conflicto aceptar, git push de la rama _UAT, si en el merge se crea otro tipo de conflicto diferente a minificados en el commit coloco resolving conflict 
+8.1) vuelvo y hago la solicitud de PR pero ahora con la nueva rama ya areglda salida de UAT
+9)le envio los link a fernando fin
+<p id="ramas-en-el-proyecto" style="margin-bottom:0px;color:rgba(51, 0, 255, 0.75);font-size:16px;font-weight: bold;">creacion de ramas en el proyecto</p>
+1)(cambios a development) siempre toda rama sale de master porq todo terminara en master si el bug no esta hay bajo cambios de UAT caso contrario se trabajara en la rama donde se este creando el nuevo modulo, despues de trabajar en mi rama me paso a development git pull y hago merge, otra vez git pull antes de subir cambios y git push
+-fix() solucion de un problema 
+-feat() algo nuevo
+git commit -m "fix(mvc) : changes when opening the add or edit form will not edit the saved password in the browser #8413"
+
+<p style="margin-bottom:0px;color:rgba(51, 0, 255, 0.75);font-size:16px;font-weight: bold;">tarea finalizada</p>
+1.1)voy a Azure ready, coloco el tiempo, un comentario en ingles colocar el servicio donde trabaje -mvc asignar un qa y listo guardar
+<p style="margin-bottom:0px;color:rgba(51, 0, 255, 0.75);font-size:16px;font-weight: bold;">mis credenciales de hkas tablero Azure</p>
+Username : heiman.castro@alivi.com
+password : Cloud24#
+password : Cloud30# nueva creo que esta es la misma clave del correo
+<p style="margin-bottom:0px;color:rgba(51, 0, 255, 0.75);font-size:16px;font-weight: bold;">para cambiar mis credenciales de git en mi pc</p>
+- panel de control en el buscador de window
+- categoria -iconos grandes 
+- administrador de credeciales - primera fila segunda columna
+- credenciales de windows busco hay abajo git coloco las credenciales que necesito poner
+<p style="margin-bottom:0px;color:rgba(51, 0, 255, 0.75);font-size:16px;font-weight: bold;">sql credenciales</p>
+server type: Databases Engine
+serverName: localhost,1434
+authentication: SQL Server Authentication
+login: sa
+password: 8jkGh47hnDw89Haq8LN2
+CapAdminDB SEP 2022 nombre de la carpeta de lo que tengo que pasarle por sql
+descargo SQL Server Management Studio (SSMS)
+lo abro y click derecho sobre la carpeta databases => import Data -tier => next => browser => abro o copio el archivo => next
+<p id="sql-actualizar" style="margin-bottom:0px;color:rgba(51, 0, 255, 0.75);font-size:16px;font-weight: bold;">sql servers como ingresar data y actualizar</p>
+- Databases : aqui dentro estan todos los servicios que tienen la data que nos pasaron una actualizacion de enero 2023 entonces actualizamos todos revizo si en la actualizacion no viene alguno ed los srvios para no borrar ese
+- entro click derecho en el servicio > delete > checkbox true > Close existing connections > ok
+- Databases click derecho > import-data-tier Aplication > Next > Browse.. , busco la carpeta de los servicios , click sobre la carpeta me mostrara el servicio.bacpac lo agrego > next > next > finsh > close
+-los .sql simplemente los arrastro y le doy ejecutar me tiene que salir success
+- build de aliviauth y listo
+- deveria bajar cambios de todos los servicios y actualizar para que funcione con la nueva data que se esta pasando metarepo  master, todos los demas servicios en development al menos que los tenga que tener en una rama especifica
+<p style="margin-bottom:0px;color:rgba(51, 0, 255, 0.75);font-size:16px;font-weight: bold;">necesario tener instalado</p>
+-Git, Git Submodules
+-Docker
+-Editor de texto (VsCode, Sublime Text)
+-SQL Server Management Studio (SSMS)
+-Visual Studio 2019 (No es requerido)
+
+Conocimientos en:
+-Html5, Css3, Jquery, Javascript
+-Vistas Razor .Net
+<p style="margin-bottom:0px;color:rgba(51, 0, 255, 0.75);font-size:16px;font-weight: bold;">docker configuracion</p>
+abro git bash desde la carpeta metaRepo y escribo estos dos comandos para actualizar docker
+docker volume create --name=sqlserverdata
+docker volume create --name=rabbitmqdata
+sql se vacia al eliminar docker toca volver a llenarlo
+-gateway, GatewayOcelot ------development
+-PayerPro.Mvc ---------------- aqui es donde hago mis cambios de UI
+-lleno la data en sql y hay si levanto los contedores en docker 
+-recordar que para levantar los contenedores docker tiene que estar encendido
+
+docker-compose down
+
+<p id="logeo" style="margin-bottom:0px;color:rgba(51, 0, 255, 0.75);font-size:16px;font-weight: bold;">credenciales para logearme</p>
+testuser1@alivi.com 4DevOnly!
+ExampleTest@gmail.com 4DevOnly!
+
+<p style="margin-bottom:0px;color:rgba(51, 0, 255, 0.75);font-size:16px;font-weight: bold;">puertos del login</p>
+http://localhost:44383/
+http://localhost:44383/Account/Login
+http://localhost:44383/Account/ForgotPassword
+http://localhost:44383/Account/ForgotPasswordConfirmation
+http://localhost:44383/Account/Signup
+http://localhost:44383/Account/AccessDenied
+http://localhost:44383/Account/ResetPassword
+http://localhost:44383/Account/ResetPasswordConfirmation
+<p id="servicios" style="margin-bottom:0px;color:rgba(51, 0, 255, 0.75);font-size:16px;font-weight: bold;">servicios que debo iniciar para cada modulo</p>
+Modulo Payer : Iniciar payers
+Modulo Member: Iniciar members
+Modulo Plan, Plan Group : Iniciar payers
+Modulo Vendor : Iniciar payers, 
+Modulo Provider : Iniciar payers, providers
+Modulo Claim : Iniciar claims, payers, providers, members
+Modulo Services Categories : Iniciar payers
+Modulo Fee Shedule : Iniciar payers
+Modulo System Code : Iniciar lookuptables
+Modulo Trading Partner: Iniciar edi-api, trading-partner, claims
+Modulo Propietary File: Iniciar proprietaryfile, payers
+Modulo Eligibility Import Profile : Iniciar eligibility, proprietaryfile,edi-api, providers, members
+Modulo Payment Processing Profile: Iniciar claims, payers, providers
+Modulo Payment Processing Run: Iniciar claims, payers, providers
+Modulo CapReconciliation : capreconciliationapi trading-partner proprietaryfile
+modulo propietaryfile : (los basicos) + proprietaryfile
+build
+docker-compose up payers 
+docker-compose up members
+docker-compose up claims
+docker-compose up providers
+docker-compose up attachment
+docker-compose up trading-partner
+docker-compose up edi-api
+docker-compose up capreconciliationapi
+docker-compose up proprietaryfile
+docker-compose up eligibility
+docker-compose up capreconciliationapi
+docker-compose up trading-partner edi-api claims
+docker-compose up capreconciliationapi trading-partner proprietaryfile
+docker-compose up capreconciliationapi edi-api proprietaryfile
+docker-compose up edi-api trading-partner eligibility proprietaryfile
+<p style="margin-bottom:0px;color:rgba(51, 0, 255, 0.75);font-size:16px;font-weight: bold;">otro proyecto portal</p>
+atributo de autorizacion al controlador
+glpayer controler
+00200016608
+  </pre>
+</p>
+
+</section>  
+<section id="seccion8" class="section">
+<h2>seccion 8</h2>
+<p>
+  <pre>
+
+  </pre>
+</p>
+</section>
+<section id="seccion9" class="section">
+<h2>seccion 9</h2>
+<p>
+  <pre>
+
+  </pre>
+</p>
+</section>
+<section id="seccion10" class="section">
+<h2>seccion 10</h2>
+<p>
+  <pre>
+
+  </pre>
+</p>
+</section>
+<section id="seccion11" class="section">
+<h2>seccion 11</h2>
+<p>
+  <pre>
+
+  </pre>
+</p>
+</section>
+<section id="seccion12" class="section">
+<h2>seccion 12</h2>
+<p>
+  <pre>
+
+  </pre>
+</p>
+</section>
+<section id="seccion13" class="section">
+<h2>seccion 13</h2>
+<p>
+  <pre>
+
+  </pre>
+</p>
+</section>
+<section id="seccion14" class="section">
+<h2>seccion 14</h2>
+<p>
+  <pre>
+
+  </pre>
+</p>
+</section>
+<section id="seccion15" class="section">
+<h2>seccion 15</h2>
+<p>
+  <pre>
+
+  </pre>
+</p>
+</section>
+<section id="seccion16" class="section">
+<h2>seccion 16</h2>
+<p>
+  <pre>
+
+  </pre>
+</p>
+</section>
+<section id="seccion17" class="section">
+<h2>seccion 17</h2>
+<p>
+  <pre>
+
+  </pre>
+</p>
+</section>
+<section id="seccion18" class="section">
+<h2>seccion 18</h2>
+<p>
+  <pre>
+
+  </pre>
+</p>
+</section>
+<section id="seccion19" class="section">
+<h2>seccion 19</h2>
+<p>
+  <pre>
+
+  </pre>
+</p>
+</section>
+<section id="seccion20" class="section">
+<h2>seccion 20</h2>
+<p>
+  <pre>
+
+  </pre>
+</p>
+</section>
+  </main>
+  <button class="scroll-top-btn hidden">&#11014;</button><!-- 7) ScrollTopButton  -->
+  <script src="./08_dom-ejercicio-practico.js" type="module"></script>
+  <!-- le tengo que especificar el atributo type="module ya que voy a trabajar con modulos" -->
+</body>
+
 </html>

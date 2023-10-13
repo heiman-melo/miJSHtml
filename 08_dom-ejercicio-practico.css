@@ -10,7 +10,7 @@
   --second-color: #222;
   --main-modal-color: rgba(247, 222, 30, 0.85);
   --second-modal-color: rgba(34, 34, 34, 0.85);
-  --container-width: 1200px;
+  --container-width: 100%;
 }
 
 html {
@@ -121,4 +121,12 @@ pre {
 .hidden {
   visibility: hidden;
   opacity: 0;
+}
+.container-button{
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos salten a la siguiente línea */
+  gap: 10px;
+}
+a{
+  text-decoration: none;
 }
