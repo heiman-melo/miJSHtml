@@ -117,7 +117,7 @@ pre {
   background-color: var(--second-color);
   color: var(--main-color);
 }
-
+/* dicplay:none no es animable con css */
 .hidden {
   visibility: hidden;
   opacity: 0;

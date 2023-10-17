@@ -18,6 +18,8 @@ import {relojDigital} from "./js/2_reloj-digital.js";
 import alarmaDigital from "./js/3_alarma-digital.js";
 import {shortcuts,bolita} from "./js/4_eventos_del_teclado.js";
 import { cuentaRegresiva } from "./js/6_cuenta_regresiva.js";
+import traductor from "./js/7_traductor.js";
+import scrollButton from "./js/8_scroll_btn_top.js";
 
 const d = document;
 d.addEventListener("DOMContentLoaded", () => {
@@ -49,25 +51,10 @@ d.addEventListener("DOMContentLoaded", () => {
   // 6) cuenta regresiva date
   cuentaRegresiva("#countdown","#activarRegresiba")
 
-  // 7)  ScrollTopButton 
-  let w = window;
-  ((d,w)=>{
-    const $scrollTop = d.querySelector(".scroll-top-btn");
-    w.addEventListener("scroll",()=>{
-      let scroll = w.pageYOffset || d.documentElement.scrollTop;
-      if(scroll > 800 ){
-      $scrollTop.classList.remove("hidden");
-      }else{
-        $scrollTop.classList.add("hidden");
-      }
-    });
-    w.addEventListener("click", (e)=>{
-      if(e.target.matches(".scroll-top-btn")){
-        w.scrollTo({
-          behavior: "smooth",
-          top:0
-        })
-      }
-    });
-  })(d,w)
+  // 7) traductor 
+
+  traductor();
+
+  // 8) ScrollTopButton 
+  scrollButton();
 });

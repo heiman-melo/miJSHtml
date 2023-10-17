@@ -14,8 +14,8 @@ export function cuentaRegresiva (countdown,activarRegresiba){
       d.querySelector(activarRegresiba).disabled = true;
         countdownTempo = setInterval(()=>{ // esta se ejecutara de una con un intervalo de tiempo especificado al final de la funcion la unica manera de detenerla es clearInterval()
         let now = new Date().getTime();
-        let limitTime = coundownDate-now; // tiempo en milisegundos va disminullendo a medida que la hora actual aumenta
-        console.log(limitTime)
+        let limitTime = coundownDate-now; // tiempo en milisegundos va disminuyendo a medida que la hora actual aumenta
+        // console.log(limitTime)
         let days = ("0" + Math.floor(limitTime/(1000*60*60*24)))// Math.floor(6.999)=6 redondea al numero mas cercano hacia abajo , (milisegundos*minutos*segundos*horas)
         let hours = ("0" + Math.floor((limitTime % (1000*60*60*24))/(1000*60*60)));
         let minutes = ("0" + Math.floor((limitTime % (1000*60*60))/(1000*60))).slice(-2);
@@ -37,7 +37,7 @@ export function cuentaRegresiva (countdown,activarRegresiba){
         if(limitTime <0 && limiteFinal < now){
           clearInterval(countdownTempo);
           $countdown.innerHTML = `<h3>${finalMessage}</h3>`;
-          d.querySelector("#alarma").play();
+          d.querySelector("#siuuuSonido").play();
           // este fue un serTimeout para detener el sonido en el tiempo que yo desee
           // setTimeout(() => { // este arranca en el tiempo que se le coloco
           //   d.querySelector("#siuuuSonido").pause(); // para pausar la alarma
