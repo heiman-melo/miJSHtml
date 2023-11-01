@@ -72,6 +72,9 @@
   color: var(--main-color);
   transition: all 0.3s ease;
 }
+.menu .menuGreen {
+  color : green
+}
 
 .menu a:hover {
   color: var(--second-color);

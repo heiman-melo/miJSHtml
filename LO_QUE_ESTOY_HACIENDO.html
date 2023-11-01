@@ -1,0 +1,101 @@
+<!-- lo que me pidio ochoa -->
+<div class="contenedor">
+  <p>1. Notificación de Aprobación</p>
+  <p style="padding-left: 25px;">1. Asunto del correo: Aprobación de Proveedor</p>
+  <p style="padding-left: 25px;">2. Cuerpo del correo</p>
+  <p style="padding-left: 50px;">1. Estimado Negociador.</p>
+  <p style="padding-left: 100px;">Su solicitud ha sido rechazada por el siguiente motivo “---” y no podrá continuar el proceso con el proveedor “Nombre Proveedor”. 
+    Debes elegir a otro proveedor.</p>
+</div>
+
+<!-- --------------------------------------------------- -->
+<div class="singleAdvancedFielters">
+    <div class="row">
+        <div>hola</div>
+        <div>chao</div>
+        <div>claro</div>
+        <div id="containerRequest">
+            <h2 class="detail-title2">Request Results Recap</h2>
+            <div class="m-b-5 p-r-10 content-labels-manage">
+              <label class="title-tabs-text font-16 f-w-500 mr-1">Total Claims:</label>
+              <label class="title-tabs-text text-value font-weight-bold">69</label>
+            </div>
+            <div class="m-b-5 p-r-10 content-labels-manage">
+              <label class="title-tabs-text font-16 f-w-500 mr-1">Successful:</label>
+              <label class="title-tabs-text text-value font-weight-bold">27</label>
+            </div>
+            <div class="m-b-5 p-r-10 content-labels-manage">
+              <label class="title-tabs-text font-16 f-w-500 mr-1">Faild:</label>
+              <label class="title-tabs-text text-value font-weight-bold">32</label>
+            </div>
+            <div class="m-b-5 p-r-10 content-labels-manage">
+              <label class="title-tabs-text font-16 f-w-500 mr-1">Unprocessed:</label>
+              <label class="title-tabs-text text-value font-weight-bold">10</label>
+            </div>
+        </div>
+    <div class="row"></div>
+</div>
+
+<!-- --------------------------------------------- -->
+<!-- para agregar estilos desde javaScript se usa el camelcase porque js no permite el - la separacion por medio del guion margin-botton = marginBotton -->
+<script>
+  // Obtener el template source
+  var source = document.getElementById("my-template").innerHTML;
+
+  // Compilar el template
+  var template = Handlebars.compile(source);
+
+  // Datos para el template
+  var data = {
+    PREGUNTAS: [
+      { PREGUNTA: "¿Usted (proveedor) o alguno de los directivos de su compañía es familiar de empleado, exempleado o miembro de junta directiva de SURA y sus filiales (en Colombia y en el exterior) o del Grupo económico al que pertenece, es decir, Grupo Sura?", NOMBRE: "Mariana Isabel Suarez Vivas", PUESTO: "Servicio", PARENTESCO: "Prima", DEPARTAMENTO: "TI" },
+      { PREGUNTA: "¿Usted (proveedor) o alguno de los directivos de su compañía es familiar de empleado, exempleado o miembro de junta directiva de SURA y sus filiales (en Colombia y en el exterior) o del Grupo económico al que pertenece, es decir, Grupo Sura?", NOMBRE: "Mariana Isabel Suarez Vivas", PUESTO: "Servicio", PARENTESCO: "Prima", DEPARTAMENTO: "TI" },
+      // Otros objetos de personas...
+    ]
+  };
+
+  // Renderizar el template con los datos
+  var result = template(data);
+
+  // Insertar el resultado en el DOM
+  document.body.innerHTML += result;
+</script>
+
+<script id="my-template" type="text/x-handlebars-template"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+
+@if (ViewData['DateRangeDecisionFilter']  != null && (bool)ViewData['DateRangeDecisionFilter'] == true)
+{
+    <div data-type="DateRangeDecisionFilter"  class="singleAdvancedFiltersChild dateDecision form-group input-group contentFilter mb-2 col-md-4">
+        <label class="w-100" for="daterangeDecisionfrom">@(ViewData["DateRangeDecisionLabel"] != null ? ViewData["DateRangeDecisionLabel"] : "")</label>
+        <div class="input-daterange input-group controls">
+            <input type="text" class="form-control datepicker" id="daterangeDecisionFrom" data-position="from" data-target="daterangeDecisionFrom">
+            <div class="input-group-append"><span class="input-group-text bg-default">To</span></div>
+            <input type="text" class="form-control datepicker lastinput" id="daterangeDecisionTo" data-position="to" data-target="daterangeDecisionTo">
+        </div>
+    </div>
+}
+
+@if (ViewData["DateRange835PaymentFilter"] != null && (bool)ViewData["DateRange835PaymentFilter"] == true)
+{
+    <div data-type="DateRange835PaymentFilter" class="singleAdvancedFiltersChild form-group input-group contentFilter mb-2 col-md-4">
+        <label class="w-100" for="daterange835PaymentFrom">@(ViewData["DateRange835PaymentLabel"] != null ? ViewData["DateRange835PaymentLabel"] : "")</label>
+        <div class="input-daterange input-group controls">
+            <input type="text" class="form-control datepicker" id="daterange835PaymentFrom" data-position="from" data-target="daterange835PaymentFrom">
+            <div class="input-group-append"><span class="input-group-text bg-default">To</span></div>
+            <input type="text" class="form-control datepicker lastinput" id="daterange835PaymentTo" data-position="to" data-target="daterange835PaymentTo">
+        </div>
+    </div>
+}
+
+@if (ViewData["DateRangeBillingFilter"] != null && (bool)ViewData["DateRangeBillingFilter"] == true)
+{
+    <div data-type="DateRangeBillingFilter" class="singleAdvancedFiltersChild form-group input-group contentFilter mb-2 col-md-4">
+        <label class="w-100" for="daterangeBillingFrom">@(ViewData["DateRangeBillingLabel"] != null ? ViewData["DateRangeBillingLabel"] : "")</label>
+        <div class="input-daterange input-group controls">
+            <input type="text" class="form-control datepicker" id="daterangeBillingFrom" data-position="from" data-target="daterangeBillingFrom">
+            <div class="input-group-append"><span class="input-group-text bg-default">To</span></div>
+            <input type="text" class="form-control datepicker lastinput" id="daterangeBillingTo" data-position="to" data-target="daterangeBillingTo">
+        </div>
+    </div>
+}
