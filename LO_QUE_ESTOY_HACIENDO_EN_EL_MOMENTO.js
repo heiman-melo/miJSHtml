@@ -49,12 +49,12 @@
 
 // -----------------------------------------------------anlizando la tarea de fernando 8506--------------------------------------------------
 
-let algo ={
-"Total de solicitudes"              :"es un recuento de todas las entradas en ClaimManagementRequestClaim para la solicitud",
-"Éxito"                             :"es el recuento de las entradas en ClaimManagementRequestClaim para la solicitud con un RequestResults de ,Éxito, - Por cierto, este literal debería ser ,Éxito",
-"Fallida "                          :"es un recuento de las entradas en ClaimManagementRequestClaim para la solicitud con un RequestResults que empieza por Fallida",
-"Sin procesar"                      :"es el recuento de entradas en ClaimManagementRequestClaim para la solicitud con un RequestResults nulo",
-}
+// let algo ={
+// "Total de solicitudes"              :"es un recuento de todas las entradas en ClaimManagementRequestClaim para la solicitud",
+// "Éxito"                             :"es el recuento de las entradas en ClaimManagementRequestClaim para la solicitud con un RequestResults de ,Éxito, - Por cierto, este literal debería ser ,Éxito",
+// "Fallida "                          :"es un recuento de las entradas en ClaimManagementRequestClaim para la solicitud con un RequestResults que empieza por Fallida",
+// "Sin procesar"                      :"es el recuento de entradas en ClaimManagementRequestClaim para la solicitud con un RequestResults nulo",
+// }
 
 // -----------------nelumbo----------------------------------------------------------------------------------------------------------------------------
 // -las chingadas plantillas 
@@ -62,3 +62,10 @@ let algo ={
 // - que las variables no pueden tener mas de dos pisos _
 // las preguntas son dinamicas tambien en variables
 // las respuestas son dinamicas con variables 
+
+
+// {{#if MAYOR}}
+// <strong>{{NOMBRE}}</strong>
+// {{else}}
+// {{NOMBRE}}
+// {{/if}}

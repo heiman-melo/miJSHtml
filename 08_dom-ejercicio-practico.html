@@ -134,6 +134,14 @@ color: hsla(hue, saturation, lightness, alpha); -- Códigos HSLA (con transparen
 opacity:0.7;---------------------------- para volver mas clarito el color
 color: darken(#537266,20%);- - - - - - - para oscurecer un color el tanto porciento que queramos
 background: lighten(#822225,15%); - - - -para aclarar un color el tanto porciento que queramos
+
+.rowBackground:nth-child(odd) {
+  background-color: #f2f2f2; /* Cambia el color de fondo para las filas impares o hijos especificos de un contenedor según tus necesidades */
+}
+.rowBackground:nth-child(even) {
+  background-color: #fff; /* Cambia el color de fondo para las filas pares o hijos especificos de un contenedor
+   según tus necesidades */
+}
 <h4 id="textos" style="margin-bottom:0px;color:red"">textos</h4>
 en google fonts escojo la letra despues escojo los grosores que yo quiera usar 100 300 400 500 900 ya seleccionadas mis 
 letras le doy click embed me da el link que coloco en el head y css font-family que coloco en css
@@ -509,6 +517,7 @@ git reset --hard rama donde necesito regresar cambios@{"30 minutes may"} no esto
   <button><a href="#tabDynamic">tabDynamic</a></button>
   <button><a href="#Modulos">analisis de modulos</a></button>
   <button><a href="#selectHkas">select hkas</a></button>
+  <button><a href="#entitylookupOpenCloseForm">entitylookupOpenCloseForm</a></button>
 </div>
 <p>
   <pre>
@@ -680,6 +689,23 @@ $(document).on('click', '.customtab li a.nav-link', function (event) {} ); esta 
   custom-select  es una clase que no tiene nada que ver con boostrap se creo para darle estilos al proyecto al tener el select esa clase me toma la libreria select2
 -payerProLUTSelect({}) tambien se le pasan opciones este no lo he usado mucho es el que le sale el cargador refres al lado
 -typeahead() otro plugin , initializerTypeahead() esta es la funcion que se llama para crear el typeahead() site-form.js en este archivo esta esa logica
+<p id="entitylookupOpenCloseForm" style="margin-bottom:0px;color:rgba(51, 0, 255, 0.75);font-size:16px;font-weight: bold;">entitylookupOpenCloseForm</p>
+- ".frmAdvancedSearch" clase del formulario que engloba los dos filtros 
+1) ".singleAdvancedFilters" clase del contenedor global del filtro no avanzado 
+1.1) ".contentFilter"  clase que tienen todos los campos de fecha
+1.2) ".text-moreFilters" "#addvancedMore" clase del texto que sale al final y id del boton de abrir el filtro avanzado 
+1.3) ".selectFilterMultiple" clase del primer campo select que aparece de primero en todo los modulos 
+1.4) ".normalFilterButton" clase del boton de hacer la busqueda 
+1.5) ".titleFilter" clase del titulo Filters
+
+1.6) ".NewOptionalTypeaheadContainer" clase del contenedor de unos tipeheader que esta hide y dejan de estarlo segun en modulo
+1.7) ".NewOptionalTypeahead" clase de los dos posibles typeheader que pueden salir dentro del formulario 
+1.8) ".NewOptionalCheckboxContainer" clase del contenedor de los checkbox 
+
+1.9) ".contentFilterFirts" clase adicional que le coloque al campo de fecha que es solito sin from to
+
+2) ".moreAdvancedFilters" clase del contenedor del filtro avanzado
+    <!-- fin de toda la seccion de hkas -->
     </pre>
 </p>
 
@@ -990,7 +1016,10 @@ let algo4 = { ...algo2, cedula: 8888 }; agregar un objeto y cambiar alguna de su
 <h2>seccion 14</h2>
 <p>
   <pre>
-
+  handlebars
+  npm i
+  node index.js // de esta manera corro un archivo
+  node index
   </pre>
 </p>
 </section>
