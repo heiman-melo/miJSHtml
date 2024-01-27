@@ -1,0 +1,71 @@
+     @if (Model.ClaimConditions is != null && Model.ClaimConditions.Any())
+                        {
+                            @foreach (var (item, index) in Model.ClaimHealthCareDates.Select((value, i) => (value, i)))
+                            {
+                                <div class="col-12 d-flex flex-row pt-2 pb-2  @(index % 2 == 0 ? "bg-light-inverse" : "")">
+                                    <div class="col-6">
+                                        <div class="d-flex">
+                                            <label class="title-tabs-text font-16 f-w-500 mr-2">{@item.CrcCodeCategory}</label>
+                                            <label class="title-tabs-text font-16 f-w-500">-</label>
+                                            <label class="title-tabs-text font-weight-bold ml-2">@item.CrcCodeCategoryDescription</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        @if (item.CrcConditionCode1 is { })
+                                        {
+                                            <div class="d-flex">
+                                                <label class="title-tabs-text font-16 f-w-500 mr-2">{@item.CrcConditionCode1}</label>
+                                                <label class="title-tabs-text font-16 f-w-500">-</label>
+                                                <label class="title-tabs-text font-weight-bold ml-2">@item.CrcConditionCode1Description</label>
+                                            </div>
+                                        }
+                                        @if (item.CrcConditionCode2 is { })
+                                        {
+                                            <div class="d-flex">
+                                                <label class="title-tabs-text font-16 f-w-500 mr-2">{@item.CrcConditionCode2}</label>
+                                                <label class="title-tabs-text font-16 f-w-500">-</label>
+                                                <label class="title-tabs-text font-weight-bold ml-2">@item.CrcConditionCode2Description</label>
+                                            </div>
+                                        }
+                                        @if (item.CrcConditionCode3 is { })
+                                        {
+                                            <div class="d-flex">
+                                                <label class="title-tabs-text font-16 f-w-500 mr-2">{@item.CrcConditionCode3}</label>
+                                                <label class="title-tabs-text font-16 f-w-500">-</label>
+                                                <label class="title-tabs-text font-weight-bold ml-2">@item.CrcConditionCode3Description</label>
+                                            </div>
+                                        }
+                                        @if (item.CrcConditionCode4 is { })
+                                        {
+                                            <div class="d-flex">
+                                                <label class="title-tabs-text font-16 f-w-500 mr-2">{@item.CrcConditionCode4}</label>
+                                                <label class="title-tabs-text font-16 f-w-500">-</label>
+                                                <label class="title-tabs-text font-weight-bold ml-2">@item.CrcConditionCode4Description</label>
+                                            </div>
+                                        }
+                                        @if (item.CrcConditionCode5 is { })
+                                        {
+                                            <div class="d-flex">
+                                                <label class="title-tabs-text font-16 f-w-500 mr-2">{@item.CrcConditionCode5}</label>
+                                                <label class="title-tabs-text font-16 f-w-500">-</label>
+                                                <label class="title-tabs-text font-weight-bold ml-2">@item.CrcConditionCode5Description</label>
+                                            </div>
+                                        }
+                                    </div>
+                                </div>  
+                            }
+                            
+                        }else
+                        {
+                            <div class="col-6">
+                                <div class="d-flex">
+                                    <label class="title-tabs-text font-weight-bold">N/A</label>
+                                </div>
+                            </div>
+                        }
+
+                        <div class="b-t col-12"></div>
+
+
+
+<!-- class="row col-12 pt-2 pb-2 pl-0 pr-0 m-0" -->

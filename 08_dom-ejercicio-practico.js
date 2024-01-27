@@ -20,6 +20,7 @@ import {shortcuts,bolita} from "./js/4_eventos_del_teclado.js";
 import { cuentaRegresiva } from "./js/6_cuenta_regresiva.js";
 import traductor from "./js/7_traductor.js";
 import scrollButton from "./js/8_scroll_btn_top.js";
+import darkaTheme from "./js/9_color_dark_theme.js";
 
 const d = document;
 d.addEventListener("DOMContentLoaded", () => {
@@ -57,4 +58,9 @@ d.addEventListener("DOMContentLoaded", () => {
 
   // 8) ScrollTopButton 
   scrollButton();
+
+
 });
+
+ // 9) darkatheme cambiar el tema a color oscuro o claro
+darkaTheme(".dark-theme-btn","dark-mode");

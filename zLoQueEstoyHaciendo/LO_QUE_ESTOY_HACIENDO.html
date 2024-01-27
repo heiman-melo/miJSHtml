@@ -1,0 +1,88 @@
+@using Alivi.Utils.Shared;
+@using Alivi.Utils.Extensions
+@using Alivi.ViewModels
+@*@model Alivi.ViewModels.TradingPartner.HIPAA1500ClaimsMarkedForReRouteVM
+
+<input type="hidden" asp-for="Id" />*@
+<input type="hidden" id="payerId" />
+<input type="hidden" id="payerName" />
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+
+    <div class="card">
+        @*<partial name="~/Views/Shared/Partials/_FormHeader.cshtml" model="Model.InternalIdentifier" />*@
+        <div class="card-body">
+            <div class="row">
+                <div class="form-group col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <h2 class="font-weight-bold title-tabs">Claims To Re-Route</h2>
+                </div>
+
+                <label for="Payer-typeahead">Payer</label>
+                <div class="controls">
+                    <div class="typeahead__container">
+                        <div class="typeahead__field">
+                            <div class="typeahead__query">
+                                <input id="Payer-typeahead" class="form-control PayerTA" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-100" id="batchDivTable">
+                    <partial name="~/Views/EntityLookup/_EntityLookupDataTable.cshtml" model="nameof(Alivi.ViewModels.TradingPartner.HIPAA1500ClaimsMarkedForReRouteVM)" />
+                </div>
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 m-auto text-center hide data_notfound" id="notfound_Batch">
+
+                    <h2 class="font-weight-bold title-tabs text-center">There's nothing here...</h2>
+                    <span class="text-secondary-filter text-center">Data not found</span>
+                    <img src="~/lib/images/NoResultsIllustration.svg" alt="No Results" class="img-responsive w-35 d-block m-auto" />
+
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <div class="card">
+                        <div class="card-body pb-0">
+                            <div class="row">
+                                <div class="col-md-12 text-right btnsFormButtons p-0">
+                                    <a href="#" id="btnSave" class="btn text-uppercase waves-effect waves-light btn-primary btnModule">Save</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 alertForm"></div>
+@*<partial name="~/Views/Shared/Partials/_SaveCloseFormButtons.cshtml" model="null" />*@
+
+<style type="text/css">
+  @page {
+      margin: 100px 20px;
+  }
+  body {
+      counter-reset: page;
+  }
+  #header {
+      background-color: yellow;
+      position: running(header);
+  }
+  #content {
+      background-color: green;
+  }
+  #footer {
+      background-color: red;
+      position: running(footer);
+  }
+  @page {
+      @top-center {
+          content: element(header);
+      }
+      @bottom-center {
+          content: element(footer);
+      }
+  }
+</style>
+
+<!-- con este estilo hago que el contenido de ese bloque se me quede en una sola paguina -->
+<div style="page-break-before: always;"></div> 

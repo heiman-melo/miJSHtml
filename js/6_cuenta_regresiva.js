@@ -1,7 +1,7 @@
 export function cuentaRegresiva (countdown,activarRegresiba){
   // let limitDate = "jun 03,2023 03:23:19"
   // let limitDate = "jan 28,2023 24:00:00";
-  let limitDate ="November 02, 2023 18:00:00";
+  let limitDate ="December 05, 2023 18:00:00";
   // let finalMessage = "Feliz cumpleaños heiman castro";
   let finalMessage = "6 de la tarde siuuuu";
   let d = document;
