@@ -69,3 +69,90 @@
 // {{else}}
 // {{NOMBRE}}
 // {{/if}}
+
+// 1 Payer > Index > Manage | Tab Plans (listo)
+// 2 Payer > Index > Manage | Tab Attachments (tablaNormal) (1 este me falta porque es la tabla que se crea en attachment a patica)
+// 3 Plan Benefits > Plan > Index (listo)
+// 4 Plan Benefits > Plan Graoup > Index (listo)
+// 5 Member > Index > Manage | Tab Benefit Usage (listo)
+// 6 Member > Index > Mangae | Tab Attachments (tablaNormal)
+// 7 Vendors > Index > Manage | Tab Attachments (tablaNormal)
+// 8 Providers> Index > Manage | Tab Attachments (tablaNormal)
+// 9 Claim Search > Index (listo)
+// 10 Configuration > System Code (listo)(tablaNormal)(parecida a attachments)(medio resuelta logica que me funciono)
+// 11 Configuration > Claim Pend Management > Index (listo)
+
+
+// 12 Configuration > User Managment > Index (tablaNormal)()revizar no la habia echo
+
+
+// 13 EDI > Cap Reconciliation > Index > Manage >Tab File List Imported (listo)
+// 14 EDI > Trading Partners > Index > Manage > Tab File List Imported / Exported (listo)
+// 15 EDI>277U Pending Exports > Index (listo)
+
+
+// 16 Payment Processing > Run > Index (listo)
+// 17 Payment Processing > General Ledger > Vendor Adjustment > Index (listo)
+// 18 UM > Index (listo)
+
+// -----------------------------------------------------------------------------------
+// 2 Payer > Index > Manage | Tab Attachments (tablaNormal) (1 este me falta porque es la tabla que se crea en attachment a patica)
+// 6 Member > Index > Mangae | Tab Attachments (tablaNormal)
+// 7 Vendors > Index > Manage | Tab Attachments (tablaNormal)
+// 8 Providers> Index > Manage | Tab Attachments (tablaNormal)
+// 10 Configuration > System Code (tablaNormal)(parecida a attachments)(medio resuelta logica que me funciono) (1 aparte)
+// Configuration > User Managment > Index (tablaNormal) (2 aparte)
+
+// -----------------------------------------------------------------------------------
+
+//  imageNotFoundData(settings, 200, '#Index_Plan');
+
+// la vuelta es que ahora todos los servicios en dev van a estar en next6 solo vana a estar en el formato viejo en master o UAT si quiero correr un servicio actualizado en dev devo hacerlo con el comando indicado ya no con docker con docker solo correre dos servicios indicados 
+// mvc en dev tambien hay que correrlo con el comando o eso creo 
+// filterDataTable tablas este es el contenedor que busca 
+// filter_dataTable contenedor este es el contenedor que oculta 
+// data_notfound y esta es la imagen que esta oculta
+
+
+function imageNotFoundDataTableAttachment(obj = null, contextId = null){
+  debugger
+  if (obj?.json !== null && obj?.json?.length === 0) {
+  $(`${contextId} #attachmentSection table`).addClass('hide');
+  $(`${contextId} #attachmentSection .f-r`).addClass('hide');
+  $(`${contextId} #attachmentSection .data_notfound`).removeClass('hide');
+  }else{
+    $(`${contextId} #attachmentSection table`).removeClass('hide');
+    $(`${contextId} #attachmentSection .f-r`).removeClass('hide');
+    $(`${contextId} #attachmentSection .data_notfound`).addClass('hide');
+  }
+}
+
+    // tablaNormal
+function imageNotFoundDataTableNormal(obj = null, statusRequest = 200, contextId = null ,special=false){
+  debugger
+  if (obj?.json != null && obj?.json?.data?.length == 0) {
+  $('#lookupTableDataTable',$(targetLookupTable.lookupTableDataTable_wrapper)).addClass('hide');
+  $('.f-r',$(targetLookupTable.lookupTableDataTable_wrapper)).addClass('hide');
+  $(".data_notfound").removeClass('hide');
+  }else{
+    $('#lookupTableDataTable',$(targetLookupTable.lookupTableDataTable_wrapper)).removeClass('hide');
+    $('.f-r',$(targetLookupTable.lookupTableDataTable_wrapper)).removeClass('hide');
+    $(".data_notfound",getContext()).addClass('hide');
+  }
+}
+
+{/* <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 filter_dataTable">
+    <div class="table-responsive m-t-20 lookupTableColumnsPartial filterDataTable">
+        <table id="lookupTableDataTable" data-url="@Url.Action("DataTableServerSideProcessing","LookupTable")" class="display nowrap table table-hover table-striped" cellspacing="0" width="100%">
+            <thead>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 m-auto text-center hide data_notfound">
+        <h2 class="font-weight-bold title-tabs text-center">There's nothing here...</h2>
+        <span class="text-secondary-filter text-center">Data not found</span>
+        <img src="/lib/images/NoResultsIllustration.svg" alt="No Results" class="img-responsive w-35 d-block m-auto pt-2">
+    </div>
+</div> */}
