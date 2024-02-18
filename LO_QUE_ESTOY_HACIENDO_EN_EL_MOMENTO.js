@@ -1,15 +1,15 @@
 // -----------------------------------------------------------------------
-// 1) next.js  aprender a manejarlo
+// 1) next.js  aprender a manejarlo ----------------------------------------------------------------------------------------------------------------------------------------(falta)
 // 2) NextAuth.js  es una biblioteca que se usara para la autenticacion o logeo --------------------------------------------------------------------------------------------(si)
 
-// 3) TS typeScript para el tipado fuerte ----------------------------------------------------------------------------------------------------------------------------------(si)
-// 4) Ant Design esto es para la maquetacion parecido a material ui --------------------------------------------------------------------------------------------------------(si)
+// 3) TS typeScript para el tipado fuerte ----------------------------------------------------------------------------------------------------------------------------------(ya)
+// 4) Ant Design esto es para la maquetacion parecido a material ui --------------------------------------------------------------------------------------------------------(ya)
 
 // 5) i18next  es la forma de crear archivos json entre otros y de guardar texto que se podra traducir a cualquier idioma facilmente ---------------------------------------(si)
-// 6) React Query sirve para guardar en cache las peticiones a un api esto ayuda a no llenar tanto la memoria del navegador y obtimizar la vuelta --------------------------(si)
+// 6) React Query sirve para guardar en cache las peticiones a una api esto ayuda a no llenar tanto la memoria del navegador y obtimizar la vuelta --------------------------(si)
 
-// 7) React Hook Form para validar formularios -----------------------------------------------------------------------------------------------------------------------------(si) 
-// 8) YUP  validador de formulario -----------------------------------------------------------------------------------------------------------------------------------------(si) 
+// 7) React Hook Form para validar formularios -----------------------------------------------------------------------------------------------------------------------------(esto) 
+// 8) YUP  validador de formulario -----------------------------------------------------------------------------------------------------------------------------------------(esto) 
 
 // next.js, NextAuth.js, TS, i18next, Ant Design, i18next, React Query, React Hook, YUP 
 
@@ -100,8 +100,10 @@
 // 6 Member > Index > Mangae | Tab Attachments (tablaNormal)
 // 7 Vendors > Index > Manage | Tab Attachments (tablaNormal)
 // 8 Providers> Index > Manage | Tab Attachments (tablaNormal)
-// 10 Configuration > System Code (tablaNormal)(parecida a attachments)(medio resuelta logica que me funciono) (1 aparte)
-// Configuration > User Managment > Index (tablaNormal) (2 aparte)
+
+
+// 10 Configuration > System Code () (lookupTables.js)(funciona calidad)(tablaNormal)(parecida a attachments)(medio resuelta logica que me funciono) (1 aparte)
+// Configuration > User Managment > Index (userIndex,js)(funciona poero hay que darle click para que busque)(tablaNormal) (2 aparte)
 
 // -----------------------------------------------------------------------------------
 
@@ -156,3 +158,27 @@ function imageNotFoundDataTableNormal(obj = null, statusRequest = 200, contextId
         <img src="/lib/images/NoResultsIllustration.svg" alt="No Results" class="img-responsive w-35 d-block m-auto pt-2">
     </div>
 </div> */}
+
+
+
+function adjustColumn(){
+  var tableId = $(`${getContext()} table:first`).attr('id');
+  var container = $(`#${tableId}`).closest('.filter_dataTable');
+  var differentzero = $('#' + tableId + ' thead th:not([style*="width: 0px"])').length;
+  var sameZero = $('#' + tableId + ' thead th[style*="width: 0px"]').length
+  if(tableId && sameZero > 0 && !container.hasClass('hide') && differentzero === 0){
+    $(`#${tableId}`).DataTable().columns.adjust().draw();
+  }
+}
+
+function adjustColumn(){
+  var context = getContext()
+  var tableId = $(`${context} table:first`).attr('id');
+  var container = $(`#${tableId}`).closest('.filter_dataTable');
+  var containerParent = $(`#${tableId}`).closest('.tab-pane').hasClass('tab-panelMain');
+  var differentzero = $('#' + tableId + ' thead th:not([style*="width: 0px"])').length;
+  var sameZero = $('#' + tableId + ' thead th[style*="width: 0px"]').length
+  if(tableId && sameZero > 0 && !container.hasClass('hide') && differentzero === 0 && containerParent){
+    $(`#${tableId}`).DataTable().columns.adjust().draw();
+  }
+}

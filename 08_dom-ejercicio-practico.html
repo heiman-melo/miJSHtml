@@ -525,6 +525,7 @@ git fetch muestra los cambios que hay en el remoto sin integrarlos para ver que 
 @*de esta manera se comenta codigo cshtml*@
 h.castro@nelumbo.com.co
 Nelumbo2022.
+bcwan2hwnuxk5wzdykzizvh4obb6s6xjtwhr6ucipxy662yb2cja
 1) docker-compose up aliviauth 
 2) docker-compose up gateway
 3) docker-compose up lookuptables
@@ -538,6 +539,27 @@ docker-compose up providers claims members payers
 docker-compose build providers
 docker-compose build claims
 docker-compose up --build claims compila si no a compilado y levanta o solo levanta si ya esta compilado
+
+docker-compose up rabbitmq
+docker-compose up sqlserver
+
+docker volume create --name=sqlserverdata
+docker volume create --name=rabbitmqdata
+
+git submodule foreach 'git checkout development || git checkout master || git checkout wikiMaster ||:' comando para todo en los servicios en dev
+
+git submodule foreach 'git pull ||:' este ni se supo
+
+dotnet run --project .\web_client\Mvc\PayerPro.Mvc\PayerPro.Mvc.csproj && 
+dotnet run --project .\services\Claims\Claims.Api\Claims.Api.csproj && 
+dotnet run --project .\services\Payers\Payers.Api\Payers.Api.csproj && 
+dotnet run --project .\services\Members\Members.Api\Members.Api.csproj && 
+dotnet run --project .\services\LookupTables\LookupTables.Api\LookupTables.Api.csproj  &&
+dotnet run --project .\gateway\GatewayOcelot\GatewayOcelot.csproj && 
+dotnet run --project .\services\Providers\Providers.Api\Providers.Api.csproj && 
+dotnet run --project .\services\EDI\TradingPartner\TradingPartner.csproj && 
+dotnet run --project .\services\EDI\EDIServicesApi\EDIServicesApi.csproj && 
+dotnet run --project .\services\EmailApi\EmailApi.csproj
 <p id="solicitud-de-PR" style="margin-bottom:0px;color:rgba(51, 0, 255, 0.75);font-size:16px;font-weight: bold;padding-top: 80px;">solicitud de PR</p>
 (PR) 7580 7587 tarea ya revizada
 1) repos , 2) pull requests  ,3) boton azul new pull request,
@@ -564,8 +586,9 @@ git commit -m "fix(mvc) : changes when opening the add or edit form will not edi
 1.1)voy a Azure ready, coloco el tiempo, un comentario en ingles colocar el servicio donde trabaje -mvc asignar un qa y listo guardar
 <p style="margin-bottom:0px;color:rgba(51, 0, 255, 0.75);font-size:16px;font-weight: bold;">mis credenciales de hkas tablero Azure</p>
 Username : heiman.castro@alivi.com
-password : Cloud24#
+password : Cloud24# (esta creo que ya no se estudie)
 password : Cloud30# nueva creo que esta es la misma clave del correo
+bcwan2hwnuxk5wzdykzizvh4obb6s6xjtwhr6ucipxy662yb2cja credencial de logeo que se obtuvo en el tablero de alivi al darle clic en el boton de clone
 <p style="margin-bottom:0px;color:rgba(51, 0, 255, 0.75);font-size:16px;font-weight: bold;">para cambiar mis credenciales de git en mi pc</p>
 - panel de control en el buscador de window
 - categoria -iconos grandes 
@@ -842,7 +865,11 @@ se instala React Developer Tools podremos ver la estructura pues es las herramie
 -create-react-app nombreproyecto     para crear un nuevo proyecto nombre en minuscula no me permite camelcase despues me lo convierte a camel case
 cd nombreproyecto aqui ya quedo parado en el proyecto 
 npm start de esta manera arranco el proyecto
-<p id="vite" style="margin-bottom:0px;color:rgb(62, 60, 206);font-size:16px;font-weight: bold;">(VITE VITE VITE)</p>
+<p id="vite" style="margin-bottom:0px;color:rgb(62, 60, 206);font-size:16px;font-weight: bold;padding-top:80px;">(VITE VITE VITE)</p>
+-npm install -g create-vite-app para instalar vite
+-create-vite-app my-project  de esta manera creare un proyecto dentro de la carpeta my project
+
+de aqui para abajo 
 -npm create vite@latest . con el espacio punto si estoy creando el proyecto arrastrando una carpeta a visual studio code
 -npm i para instalar todas los modulos del directorio
 <h5 style="margin-bottom:0px;color:red">npm run dev  + ctrl+clic sobre la url donde me abrira el proyecto http://localhost:5173/</h5>
@@ -1165,19 +1192,21 @@ return (
   <p id="children" style="padding-top:80px;" >
   const ParentComponent = () => {
   return (
-    ChildComponent>
+    ChildComponent><span style="color: blue;">o Layaout en next</span>
       <span  style="color:green">
       MyOtherComponent />
       TwoOtherComponent />
       div>Hola, no soy otro componente pero igual funciono/div>
       </span>
-    /ChildComponent>
+    /ChildComponent><span style="color: blue;">o Layaout en next</span>
   );
   };
 
-  const ChildComponent = ({ <span style="color:green"> children </span>}) => {
+  const ChildComponent <span style="color: blue;">o Layout en next</span> = ({ <span style="color:green"> children </span>}) => {
   return (
+    <span style="color: yellow;">puedo agregar cosas fijas aqui encima <-Header-></span>
     div>{<span style="color:green">children</span>}/div> <span style="color:green">aqui sera donde se renderizara el componente o los componentes que estan dentro de  ChildComponent en el padre</span>
+    <span style="color: yellow;">puedo agregar cosas fijas aqui debajo <-Foother-></span>
   );
   };
 
@@ -1368,17 +1397,28 @@ const removeTask = <span style="color:rgb(251, 7, 7)">(i:number):void </span> =>
       <p>
       <pre>
 agregar un orígen remoto , creo el repositorio y con este comando parado en mi proyecto local ya lo agrego, si todo va bien me devuelve a la terminal si lo vuelvo a usar el comando me tiene que decir ya existe
+
 <p style="color:green;">1) git remote add nombre-orígen https://github.com/usuario/repositorio.git</p>
+
+git clone https://heimanmelo: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@github.com/nelumboconsultores/front-portal-garantias-sucursales.git
+
+-nuevo github para nelumbo cuenta corporativa 
+heimanmelo
+h.castro@nelumbo.com.co
+Nelumbo2022.
+--------------------------------------------------------------------------------------------------------------------
+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 token de autenticacion de nelumbo para poder traerme cualquier repositorio 
+
 con este comando ya emparejamos el repositorio en github con mi local ya despues solo git push al hacer un cambio
 <p style="color:green;">2) git push origin main (main) o (master)</p>
 este comando se usa para saber la configuracion local en mi pc de git 
 <p style="color:green;">git config --global --list</p>
+<!-- <p style="color:green;">git config --global --list</p>
 <p style="color:green;">git config --global --list</p>
 <p style="color:green;">git config --global --list</p>
 <p style="color:green;">git config --global --list</p>
 <p style="color:green;">git config --global --list</p>
-<p style="color:green;">git config --global --list</p>
-<p style="color:green;">git config --global --list</p>
+<p style="color:green;">git config --global --list</p> -->
 
 
 
@@ -1420,16 +1460,16 @@ este comando se usa para saber la configuracion local en mi pc de git
 
   </pre>
       </p>
-    </section>
-    <section id="seccion20" class="section">
-      <h2>seccion 20</h2>
-      <p>
-      <pre>
-hola agrege esto para probar
-ahora esto otro
-  </pre>
-      </p>
-    </section>
+</section>
+<section id="seccion20" class="section">
+<h2>cosas que siempre usare pero que puedo olvidar</h2>
+<p>
+<pre>
+-  https://es.pdfdrive.com/  pagina para descargar libros front-portal-garantias-sucursales
+-  adblock plus   pagina para bloquear anuncios en youtube
+</pre>
+</p>
+</section>
   </main>
   <button class="scroll-top-btn hidden">&#11014;</button><!-- 7) ScrollTopButton caracter ascii -->
   <button class="dark-theme-btn">🌚</button>
