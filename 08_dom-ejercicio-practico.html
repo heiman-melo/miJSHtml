@@ -36,12 +36,13 @@
       <a href="#seccion7">hkas</a>
       <a class="menuGreen" href="#seccion8" style="text-transform: uppercase;">traductor de texto y traductor de voz</a>
       <a href="#seccion9">react instalacion y manejo de la consola</a>
-      <a class="menuGreen" href="#seccion10" style="text-transform: uppercase;">instalacion material ui</a>
-      <a href="#seccion11">estilos material ui</a>
+      <a class="menuGreen" href="#seccion10" style="text-transform: uppercase;">nada</a>
+      <a href="#seccion11">estilos material ui instalacion</a>
       <a class="menuGreen" href="#seccion12" style="text-transform: uppercase;">javaScript para react</a>
       <a style="text-transform: uppercase;" href="#seccion13">next y react js</a>
       <a href="#seccion15">github</a>
       <a class="menuGreen" href="#seccion14" style="text-transform: uppercase;">handlebars</a>
+      <a href="#seccion20" style="text-transform: uppercase;">cosas</a>
       <!-- <a class="menuGreen" href="#seccion16" style="text-transform: uppercase;">seccion 16</a>
       <a href="#seccion17">seccion 17</a>
       <a class="menuGreen" href="#seccion18" style="text-transform: uppercase;">seccion 18</a>
@@ -525,7 +526,12 @@ git fetch muestra los cambios que hay en el remoto sin integrarlos para ver que 
 @*de esta manera se comenta codigo cshtml*@
 h.castro@nelumbo.com.co
 Nelumbo2022.
-jl3ddytsiwqohao6kkb3dhuveremtud7ghukxrjpygcfsq7cwoga
+<span style="color: blue;">como borrar una rama subida a development</span>
+https://dev.azure.com/arizonaproject/Arizona%20Microservices/_git/Arizona.Mvc/branches?_a=all
+Repos > branches > serach branch name > ... a la derecha DeleteBranche
+
+zorqrtyl67vrjbhb3i6xdukplfthzyhvyqzs7o5kekxvzo7py5iq
+
 1) docker-compose up aliviauth 
 2) docker-compose up gateway
 3) docker-compose up lookuptables
@@ -867,10 +873,10 @@ npm start de esta manera arranco el proyecto
 -vite --version
 -npm install vite
 
-de aqui para abajo
+de aqui para abajo instalacion 
 <span style="color:rgb(62, 60, 206);">instalarlo dentro de visul studio code</span> 
 <span style="color:rgb(62, 60, 206);">(con el espacio punto si estoy creando el proyecto arrastrando una carpeta a visual studio code o simp`lemente con la carpeta dentro de visual estudio code)</span>
--npm create vite@latest . 
+-npm create vite@latest .    el punto es para que me cree el proyecto en el mismo directorio o carpeta actual y no me pida nombre
 -npm i para instalar todas los modulos del directorio
 <span style="color:rgb(62, 60, 206);">para instalarlo dentro de una carpeta con la consola</span>
 - npm install -g npx
@@ -890,6 +896,9 @@ npm install --save axios
 npm install @mui/material @emotion/react @emotion/styled
 <p style="margin-bottom:0px;color:rgb(62, 60, 206);font-size:16px;font-weight: bold;">INSTALAR ANT DESING</p>
 npm install antd
+npm install --save @ant-design/icons
+<p style="margin-bottom:0px;color:rgb(62, 60, 206);font-size:16px;font-weight: bold;">react-hook-form y yup</p>
+npm install react-hook-form @hookform/resolvers yup   : de esta manera instalamos tres paquetes que necesitamos para las validaciones
 <p style="margin-bottom:0px;color:rgb(62, 60, 206);font-size:16px;font-weight: bold;">COMO SABER LAS VERSIONES QUE TENGO</p>
 npm --version , npm -v
 node -v
@@ -898,29 +907,9 @@ node -v
       </p>
     </section>
     <section id="seccion10" class="section" data-seccion="proyecto material ui">
-      <h2>proyecto material ui instalacion</h2>
+      <h2>nada</h2>
       <p>
       <pre>
-<p style="margin-bottom:0px;color:rgb(75, 60, 206);font-size:16px;font-weight: bold;">creacion del proyecto</p>
--crear una carpeta con el nombre que yo le voy a colocar al proyecto, arrastro esa carpeta a visual studio code , ctrl+ñ abro la consola , npm create vite@latest . espacio + . para que haga la instalacion en este mismo directorio o esta misma carpeta
--npm create vite@latest .     de esta forma quedaria
--despues le damos a las flechas para abajo, react , javaScript 
--npm i   para hacer la instalacion de todos los modulos
-<p style="margin-bottom:0px;color:rgb(75, 60, 206);font-size:16px;font-weight: bold;">instalacion de matrial ui</p>
--npm install @mui/material @emotion/react @emotion/styled     hacemos esta intalacion completa material ui y otras cosas para mejorar las carpwtas de estilos
--npm install @fontsource/roboto     material ui utiliza roboto como su fuente de texto  por eso la instalamos tambien 
--se colocan en el main.jsx que es el archivo principal antes del la importacion del index.css por si despues queremos cambiar algunos estilos
-import '@fontsource/roboto/300.css';
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
-
-index.css 
--npm install @mui/icons-material   de esta manera instalamos los iconos  no es necesario hacerle un import solo a las fuentes de los tipos de letras
--npm install @mui/lab #LoadingButton etc instalacion del loadingButton es una nueva funcionalidad que se esta provando al parecer ya funciona
--es7 react/redux/graphQl  extencion que recomienda para ocupar unos chort cup
--VSCode: extenciones en la guia de bluuweb
--CssBaseline  si se coloca en el main.js me resetearan los estilos y toda la aplicacion funcionara con los estilos de material ui 
   </pre>
     </section>
     <section id="seccion11" class="section" data-seccion="seccion11">
@@ -928,9 +917,12 @@ index.css
       <p>
       <pre>
     <div class="container-button">
+      <button><a href="#">abreviaciones de estilos</a></button>
       <button><a href="#formasEstilos">formas de agregar estilos</a></button>
       <button><a href="#componentes">componentes principales</a></button>
       <button><a href="#theme">theme como se cambia</a></button>
+      <button><a href="#creacionProyecto">creacion del proyecto y ui</a></button>
+      <button><a href="#instalacionUI">instalacion de ui</a></button>
       <!-- <button><a href="#textos">textos</a></button> -->
     </div>
 <p style="margin-bottom:0px;color:rgb(75, 60, 206);font-size:16px;font-weight: bold;">abreviaciones parecidas a boostrap</p>
@@ -948,7 +940,7 @@ pb  padding-bottom
 pl  padding-left
 px  padding-left,padding-right
 py  padding-top,padding-bottom
-<p id="formasEstilos" style="margin-bottom:0px;color:rgb(75, 60, 206);font-size:16px;font-weight: bold;">formas de agregar estilos</p>
+<p id="formasEstilos" style="margin-bottom:0px;color:rgb(75, 60, 206);font-size:16px;font-weight: bold;padding-top: 80px;">formas de agregar estilos</p>
 -'<'Box maxWidth="md" sx={{border:2,borderColor:"peru",p: 2,m:2,bgcolor: "#111",color:"white",'&:hover':{backgroundColor:'primary.light',opacity:[0.9, 0.8, 0.7],},}}'>' 
 <p id="formasEstilos" style="margin-bottom:0px;color:rgb(249, 0, 0);font-size:16px;font-weight: bold;display: inline;">*</p>tomando en cuenta que dependiendo del estilo puede que el numero equivalga al mismo numero en px o se multiplica por un numero  ejemplo 8px 
 
@@ -968,7 +960,7 @@ py  padding-top,padding-bottom
 
 - '<'Typography variant="h6" component="h2" align="center" mt={2} border={2}  mb={2} borderColor="red">6 Grid'</'Typography> esta es otra forma de agregar estilos directamente en la etiqueta
 
-<p id="componentes" style="margin-bottom:0px;color:rgb(75, 60, 206);font-size:16px;font-weight: bold;">algunos o principales de componentes material ui</p>
+<p id="componentes" style="margin-bottom:0px;color:rgb(75, 60, 206);font-size:16px;font-weight: bold;padding-top:80px;">algunos o principales de componentes material ui</p>
 1) '<'Container maxWidth="xs" sx={{ border: 2, boxShadow: 1, pb: 2,}}> '<'/Container>
 centra su contenido horizontalmente
 
@@ -989,7 +981,7 @@ sirve como un componente contenedor
   </'Button>   
 
 
-<p id="theme" style="margin-bottom:0px;color:rgb(75, 60, 206);font-size:16px;font-weight: bold;">ThemeProvider forma de cambiar el tema principal de material ui</p>
+<p id="theme" style="margin-bottom:0px;color:rgb(75, 60, 206);font-size:16px;font-weight: bold;padding-top: 80px;">ThemeProvider forma de cambiar el tema principal de material ui</p>
 import { ThemeProvider } from '@material-ui/core';
 1) esta es una forma con una variable si va a ser en el archivo principal
 const theme = {
@@ -1037,7 +1029,26 @@ return (
 
 -variant="contained" forma de especificar estilos de un componente hay diferente variant dependiendo del componente
 
-<p style="margin-bottom:0px;color:rgb(75, 60, 206);font-size:16px;font-weight: bold;">f</p>
+<p id="creacionProyecto" style="margin-bottom:0px;color:rgb(75, 60, 206);font-size:16px;font-weight: bold;padding-top: 80px;">creacion del proyecto</p>
+-crear una carpeta con el nombre que yo le voy a colocar al proyecto, arrastro esa carpeta a visual studio code , ctrl+ñ abro la consola , npm create vite@latest . espacio + . para que haga la instalacion en este mismo directorio o esta misma carpeta
+-npm create vite@latest .     de esta forma quedaria
+-despues le damos a las flechas para abajo, react , javaScript 
+-npm i   para hacer la instalacion de todos los modulos
+<p id="instalacionUI" style="margin-bottom:0px;color:rgb(75, 60, 206);font-size:16px;font-weight: bold;padding-top: 80px;">instalacion de matrial ui</p>
+-npm install @mui/material @emotion/react @emotion/styled     hacemos esta intalacion completa material ui y otras cosas para mejorar las carpwtas de estilos
+-npm install @fontsource/roboto     material ui utiliza roboto como su fuente de texto  por eso la instalamos tambien 
+-se colocan en el main.jsx que es el archivo principal antes del la importacion del index.css por si despues queremos cambiar algunos estilos
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
+
+index.css 
+-npm install @mui/icons-material   de esta manera instalamos los iconos  no es necesario hacerle un import solo a las fuentes de los tipos de letras
+-npm install @mui/lab #LoadingButton etc instalacion del loadingButton es una nueva funcionalidad que se esta provando al parecer ya funciona
+-es7 react/redux/graphQl  extencion que recomienda para ocupar unos chort cup
+-VSCode: extenciones en la guia de bluuweb
+-CssBaseline  si se coloca en el main.js me resetearan los estilos y toda la aplicacion funcionara con los estilos de material ui 
 
   </pre>
       </p>
@@ -1410,8 +1421,7 @@ git clone https://heimanmelo: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@github.com
 
 -nuevo github para nelumbo cuenta corporativa 
 heimanmelo
-h.castro@nelumbo.com.co
-Nelumbo2022.
+clave en el txt
 --------------------------------------------------------------------------------------------------------------------
 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 token de autenticacion de nelumbo para poder traerme cualquier repositorio 
 
